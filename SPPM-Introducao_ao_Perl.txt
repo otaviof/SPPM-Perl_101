@@ -1,0 +1,209 @@
+Introdução ao Perl
+~~~~~~~~~~~~~~~~~~
+
+A visão deste curso é dar base para o programador que deseja ter uma visão
+geral sobre a linguagem Perl. Mostrando as estruturas que a compõe, bem como
+sua história.
+
+1. Introdução:
+
+Flexível, portável, versátil, e disponível para todos, Perl cresceu de um
+substituto simples para Shell Scripts, a uma linguagem completa e de propósito
+geral.
+
+Esta popular, rica em recursos está ganhando ainda mais popularidade enquanto
+adquire mais "features" a cada nova versão.
+
+bug:
+ * isso não é uma verdade quando falamos do Perl 5, afinal, fazem anos que
+   nós estamos esperando o Perl 6;
+
+Uma característica particular, porem muito poderosa, do Perl é a sua
+implementação de bibliotecas com módulos, o qual a fez uma linguagem
+genuinamente extensível
+
+com a sua clareza, estrutura lógica e abordagem prática, este guia é ideal
+para guiar e acompanhar o leitor ao mundo Perl.
+
+1.1 Conceitos de programação
+
+Para podermos entender quais as bases do Perl, devemos primeiro relembrar
+alguns conceitos fundamentais de programação:
+
+1.1.1 Linguagem dinâmica:
+
+É uma classe de linguagens, com um alto nível de abstração [1], no qual em
+tempo de execução realizam tarefas que outras linguagens (chamadas
+"estáticas") fariam em tempo de compilação. Neste comportamento dinâmico, o
+software poderia incluir/importar novas partes, extender objetos e definições,
+tudo isso é provido de maneira direta e simples.
+
+[1] Níveis de abstração é uma classificação, relativa ao desenvolvimento de
+software e a uma linguagem de programação, indicando 
+
+Atenção: O termo "linguagem dinâmica" é diferente de "tipagem dinâmica". O
+primeiro refere-se ao dinamismo em tempo de execução; o segundo, refere-se a
+validação dos tipos.
+
+Leia mais:
+    * http://en.wikipedia.org/wiki/Dynamic_language
+
+1.1.2 Tipagem dinâmica:
+
+Uma linguagem de programação tem tipos dinâmicos (por exemplo: int, char,
+scalar, array, hash), quando a maioria das verificações de tipos é feita em
+tempo de execução. Ou seja, os tipos, propriamente ditos, são associados aos
+valores e não as variáveis.
+
+Exemplos de linguagens com tipos dinâmicos: Groovy, JavaScript, Lisp, Lua,
+Objective-C, PHP, Perl, Prolog, Python, Ruby, Smalltalk, Tcl.
+
+Tipos dinâmicos vão acusar seus erros em tempo de execução; por exemplo, um
+valor pode ser um tipo inesperado ou inexistente, ou uma operação errônea (sem
+sentido) pode ser atribuída a um tipo que não a suporta. Deve ficar evidente
+que este tipo de situação é _sempre_ causada pelo programador, e em um cenário
+assim, pode ser um pouco mais trabalhoso encontrar o causador. É uma situação
+esperada.
+
+Se compararmos as linguagens de Tipagem Dinâmica com as de Tipagem Estática,
+elas fazem muito menos verificações nos fontes em tempo de compilação, apenas
+é certificado de que o programa está sintaticamente correto. Verificações em
+tempo de execução podem potencialmente ser mais sofisticados, porque são
+utilizadas as informações geradas pela execução do software, em
+contra-partida, estas verificações são executadas todas as vezes que o
+software for chamado.
+
+O desenvolvimento em linguagens de Tipos Dinâmicos tem grande auxílio por boas
+práticas de programação, como por exemplo Testes Unitários (Unit Testing).
+"Testar" é a chave em desenvolvimento profissional de software, e é
+particularmente importante nestes casos. Na prática, os testes asseguram a
+operação correta do seu software de forma muito mais ampla se comparado às
+estáticas (ou seja, através da verificação de tipos feita pelo compilador).
+
+Saiba mais:
+    http://en.wikipedia.org/wiki/Dynamic_typing#Dynamic_typing
+
+1.1.3 Sobre os tempos
+
+Nos tópicos acima nós citamos os tempos de "Compilação" e de "Execução", é
+necessário relembrar o que é feito em cada um deles:
+
+* Tempo de Compilação (Compile-Time) [1]:
+
+    Refere-se as operações feitas por um compilador, as necessidades de uma
+    linguagem de programação que devem ser equivalentes as descritas no código
+    fonte para que este processo seja executado com sucesso. As operações
+    executadas em "Compile-Time" geralmente incluem análise sintática, vários
+    tipos de análises semânticas, etc.
+
+* Tempo de Execução (Run-Time) [2]:
+
+    Refere-se ao período enquanto um software está sendo executado, do começo
+    ao seu fim. Também pode indicar a duração deste período. O termo é
+    geralmente empregado para contraste de outras fases do desenvolvimento e
+    uso de um software.
+
+Estes são os dois mais importantes, porem nós ainda temos o "Link Time" [3]
+que consiste em: 
+
+    Refere-se as operações feitas por uma ferramenta que fará a união entre os
+    elementos que são necessários para que um software seja entregue com
+    sucesso após o Tempo de Compilação. As operações performadas em "Link
+    Time" incluem a reunião de endereços externos ao software, vários tipo de
+    validações para referências cruzadas entre módulos, entre outros.
+
+[1] http://en.wikipedia.org/wiki/Compile_time
+[2] http://en.wikipedia.org/wiki/Run_time_(computing)
+[3] http://en.wikipedia.org/wiki/Link_time
+
+1.2 O que é necessário para acompanhar este curso?
+
+Este curso é, antes de mais nada, uma introdução prática ao mundo de
+desenvolvimento Perl, portanto, os seguintes itens são indispensáveis:
+
+* Editor de Texto competente;
+* Browser;
+* Interpretador Perl instalado;
+* Acesso a internet;
+* Acesso a Console;
+
+2. Editores de Texto
+
+Atenção: O editor é a arma mais potente no seu arsenal!
+
+No mundo de linguagens dinâmicas a ferramenta mais comum, para o dia-a-dia, é
+um bom editor de textos.
+
+Na afirmação acima, fica sendo a explicação a parte mais interessante:
+linguagens dinâmicas -- como o próprio nome já diz -- traz as diretivas de
+como o software vai se comportar para o tempo de execução, assim como já foi
+explicado, em outras palavras, o comportamento do software é mais difícil de
+prever.
+
+A palavra "prever" é uma das pedras fundamentais para o trabalho de uma IDE,
+pois, ela ajuda o programador a entender e interagir com o _comportamento_ do
+software.
+
+    Por exemplo: Suponhamos que você criou uma nova variável: "my $test;",
+    agora, vamos nos lembrar quais tipos, ou seja, quais valores eu posso
+    atribuir a esta variável. Ao falar de Perl, nós já temos a resposta:
+    qualquer um! Agora, voltando ao trabalho das IDEs, você deve estar de
+    acordo comigo: este é um comportamento _muito_ mais complexo, se o
+    compararmos a uma linguagem estática.
+
+Porem, vamos voltar aos editores de texto, agora. Na contra-mão das IDEs,
+temos muitas vantagens:
+
+    * rápido para inicializar (exige poucos recursos computacionais);
+    * foco para a interação com o texto;
+    * recursos de edição avançados;
+    * extensibilidade;
+    * macros;
+    * snippets;
+    * extremamente personalizável;
+
+Quando trocamos o que está relacionado a "prever" e nos voltamos para o
+"planejar". Ou seja, uma interação entre homem e texto.
+
+Editores recomendados:
+
+    * Vim (GVim, Vim, MacVim) [1];
+    * EMacs [2];
+    * TextMate [3];
+    * JEdit [4];
+
+No entanto, ao leitor interessado pelo uso de uma IDE, temos um projeto que
+está crescendo bastante, ganhando adeptos e certamente merece a nossa
+atenção: Padre IDE ("Padre, the Perl IDE") [5].
+
+Para saber mais:
+    http://www.moolenaar.net/habits.html
+    http://oreilly.com/catalog/9780596519544
+    http://pragprog.com/the-pragmatic-programmer
+
+[1] http://www.vim.org/
+[2] http://www.gnu.org/software/emacs/
+[3] http://macromates.com/
+[4] http://www.jedit.org/
+[5] http://padre.perlide.org/
+
+9. Compiladores
+
+Falar sobre compiladores e sobre o compilador Perl, primeiramente
+
+http://en.wikipedia.org/wiki/Compiling
+
+    
+E é exatamente na palavra "prever"
+
+
+
+
+
+TODO:
+    * Ao falar sobre IDEs, editores de texto para desenvolvimento, é essencial
+      lebrar do Padre!
+    * Explicar os tempos: compilação e execução. Seria legal expandir um pouco
+      dentro de cada um dos três, falando sobre os subtópicos. Talvez até
+      chegar a estudar um compilador simples, vamos ver o que agrega mais para
+      as aulas;

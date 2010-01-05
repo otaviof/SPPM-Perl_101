@@ -1,0 +1,33 @@
+* Introdução a linguagem;
+* História da linguagem;
+* Larry Wall;
+* Quem usa Perl?;
+* Cultura Perl;
+* Comunidade / ES;
+* Plataformas suportadas pelo Perl;
+* Perl no Windows;
+* Perl e os unixes-like;
+* Documentação (Perldoc);
+* Estruturas:
+    * Scalares;
+    * Arrays;
+    * Hashes;
+    * Estruturas Complexas;
+* Estruturas de repetição, condições e operadores;
+* Tratamento de arquivos;
+* Expressões Regulares;
+* Módulos;
+* CPAN;
+* Boas práticas:
+    * Agile;
+    * TDD;
+    * Integração contínua;
+    * DRY;
+    * Testes de Aceiação;
+    * Testes de Integração;
+* Orientação a Objetos com Moose;
+* Perl para Web;
+* O Passado com os CGIs;
+* Introdução Catalyst;
+    * Template Toolkit 2;
+    * DBIx::Class;
