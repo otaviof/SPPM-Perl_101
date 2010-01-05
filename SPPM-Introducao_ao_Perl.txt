@@ -127,6 +127,10 @@ desenvolvimento Perl, portanto, os seguintes itens são indispensáveis:
 * Acesso a internet;
 * Acesso a Console;
 
+Também é desejável, ter noções de inglês para leitura técnica. Você vai
+perceber ao longo deste material que os melhores documentos estão em inglês, e
+que em muitos casos a tradução para "pt_BR" deixa a desejar.
+
 2. História da Linguagem 
 
 2.1 Perl 4 e 5
@@ -165,8 +169,8 @@ suportar estas plataformas.
 Na versão 5.6, Perl revisou a sua politica de versionamento, para se mais
 específica. Em particular, ela adotou o mesmo sistema utilizado pelo GNU/Linux
 [5] para versionar. Também nesta mesma versão, Perl introduziu melhorias,
-sendo as principais: um suporte melhor aos idiomas Unix sobre o Windows [6] e
-suporte inicial ao Unicode [7].
+sendo as principais: um suporte melhor aos idiomas (comandos, sintaxe) Unix
+sobre o Windows [6] e suporte inicial ao Unicode [7].
 
 A partir da 5.6, suporte experimental às threads ao nível do usuário, ou seja,
 para escrever Perl com suporte a esta tecnologia.
@@ -179,15 +183,15 @@ para Windows e uma suite de testes com suporte a regressão.
 
 [ 1] http://en.wikipedia.org/wiki/Object-oriented_programming
 [ 2] http://en.wikipedia.org/wiki/Thread_(computer_science)
-[ 3] child-process forks
-[ 4] system call
-[ 5] GNU/Linux versioning system
-[ 6] Unix idioms under Windows
-[ 7] Unicode
-[ 8] PerlIO
-[ 9] Filehandle layers
-[10] Pseudo-hashes
-[11] signas, signal handling, unix-sinals
+[ 3] http://en.wikipedia.org/wiki/Fork_%28operating_system%29
+[ 4] http://en.wikipedia.org/wiki/System_call
+[ 5] http://en.wikipedia.org/wiki/Linux_kernel#Version_numbering
+[ 6] http://win32.perl.org/wiki/index.php?title=Main_Page
+[ 7] http://en.wikipedia.org/wiki/Unicode
+[ 8] http://perldoc.perl.org/PerlIO.html
+[ 9] http://perldoc.perl.org/FileHandle.html
+[10] http://perldesignpatterns.com/?PseudoHash
+[11] http://en.wikipedia.org/wiki/Signal_%28computing%29
 
 2.2 Futuro: Perl 6
 
