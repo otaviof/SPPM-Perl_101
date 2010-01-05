@@ -209,6 +209,20 @@ Perl 5 para a Parrot, o planejamento é para que seja compatível com o Perl
 [2] http://www.parrotcode.org
 [3] http://www.poniecode.org 
 
+2.3 Larry Wall
+
+Perl foi originalmente desenvolvida por Larry Wall [1], um linguista [2]
+trabalhando como Sysadmin [3] na NASA [4]. E, no ano de 1987, criou uma
+linguagem -- de propósito geral, com foco em scripts Unix -- que transformou o
+processamento de texto em uma tarefa _muito_ mais fácil. Desde então, ele
+continua a trabalhar no seu projeto e tornou-se um programador mundialmente
+conhecido. Atualmente, ele está trabalhando no Perl 6.
+
+[1] http://en.wikipedia.org/wiki/Larry_Wall
+[2] http://en.wikipedia.org/wiki/Linguistics
+[3] http://en.wikipedia.org/wiki/Systems_administrator
+[4] http://en.wikipedia.org/wiki/NASA
+
 5. Ferramentas (??)
 
 5.1. Editores de Texto
