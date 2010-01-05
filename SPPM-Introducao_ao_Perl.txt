@@ -30,7 +30,7 @@ para guiar e acompanhar o leitor ao mundo Perl.
 Para podermos entender quais as bases do Perl, devemos primeiro relembrar
 alguns conceitos fundamentais de programação:
 
-1.1.1 Linguagem dinâmica:
+1.1.1 Linguagem dinâmica
 
 É uma classe de linguagens, com um alto nível de abstração [1], no qual em
 tempo de execução realizam tarefas que outras linguagens (chamadas
@@ -48,7 +48,7 @@ validação dos tipos.
 Leia mais:
     * http://en.wikipedia.org/wiki/Dynamic_language
 
-1.1.2 Tipagem dinâmica:
+1.1.2 Tipagem dinâmica
 
 Uma linguagem de programação tem tipos dinâmicos (por exemplo: int, char,
 scalar, array, hash), quando a maioria das verificações de tipos é feita em
@@ -83,7 +83,7 @@ estáticas (ou seja, através da verificação de tipos feita pelo compilador).
 Saiba mais:
     http://en.wikipedia.org/wiki/Dynamic_typing#Dynamic_typing
 
-1.1.3 Sobre os tempos
+1.1.3 Sobre os "tempos"
 
 Nos tópicos acima nós citamos os tempos de "Compilação" e de "Execução", é
 necessário relembrar o que é feito em cada um deles:
@@ -116,7 +116,7 @@ que consiste em:
 [2] http://en.wikipedia.org/wiki/Run_time_(computing)
 [3] http://en.wikipedia.org/wiki/Link_time
 
-1.2 O que é necessário para acompanhar este curso?
+1.2 Para acompanhar o curso
 
 Este curso é, antes de mais nada, uma introdução prática ao mundo de
 desenvolvimento Perl, portanto, os seguintes itens são indispensáveis:
@@ -127,7 +127,86 @@ desenvolvimento Perl, portanto, os seguintes itens são indispensáveis:
 * Acesso a internet;
 * Acesso a Console;
 
-2. Editores de Texto
+2. História da Linguagem 
+
+Perl é uma linguagem em evolução, frequentemente é atualizada com suporte para
+novas features. Apesar disso, ela ainda é uma linguagem fácil de aprender e
+não perdeu suas bases concisas, evoluindo de uma simples ferramenta de
+construir scripts para uma completa, no sentido exato da palavra, construtora
+de aplicações orientada a objetos [1].
+
+[1] http://en.wikipedia.org/wiki/Object-oriented_programming
+
+Perl evolved hand-and-glove with the Internet, and gained rapid popularity in
+its early days as a language for writing quick utility scripts. This was
+thanks in part to its powerful text handling fea- tures and familiarity to
+programmers used to the sed and awk tools by which it was partly inspired.
+Perl has an obvious relationship to C, but it also has characteristics derived
+from Lisp. It gained popularity as a language for writing server-side CGI
+scripts for web servers, again because of its text handling abilities and also
+because of its rapid prototyping. This culminated in version 4 of Perl.
+
+
+Perl evoluiu de forma paralela, próxima a Internet. Ganhou popularidade nos
+seus primeiros dias como uma linguagem para escrever rapidamente scripts
+utilitários. Isso era graças ao poderoso processador de textos e familiaridade
+para programadores que faziam uso do Sed [2] e Awk [3], nestas duas o Perl era
+parcialmente inspirado. Perl estava obviamente relacionada ao C, mas isso
+também era uma característica derivada de Lisp. O resultado ganhou
+popularidade como uma linguagem para escrever CGIs (server-side) scripts para
+Web Servers, novamente, porque as habilidades de lidar com texto e porque era
+facilmente manipulável e expressiva. Tudo isso, durante o que foi chamado de
+Perl 4.
+
+
+
+Release 5 of Perl took Perl to a new level by introducing object-oriented
+programming features. Like the language itself, Perl’s support for objects
+applies itself to getting the job done rather than worrying overly about
+ideology, but nonetheless turns out to be very capable. The ability to support
+objects derived principally from the introduction of hard references to the
+language. Up until this point, Perl only had symbolic references, which are
+now deprecated (and indeed disallowed with the strict module). It was in
+version 5 that Perl became more than just a language for writing short utility
+scripts and became a language in which serious applications could be
+developed.
+
+Version 5.005 introduced initial support for threaded programming, albeit only
+inside the interpreter itself. This gave Windows, and other platforms that did
+not support child processes, an emulation of the Unix fork system call, thus
+greatly improving Perl’s support on those platforms.
+
+In version 5.6, Perl revised its version numbering system to be more in line
+with version num- bers elsewhere. In particular, it adopted the Linux system
+of numbering stable and development releases with even and odd release
+numbers—in this scheme the previous stable release is now ret- rospectively
+known as Perl 5.5, the odd number notwithstanding. Version 5.6 introduced a
+number of important improvements, the main ones being much better support of
+Unix idioms under Win- dows and initial support for Unicode character sets.
+From version 5.6, experimental support for threads in user-level programming
+was first introduced, but only if built from source and requested at that
+time.
+
+Perl 5.8 brings an improved implementation of threads known as interpreter
+threads. It also brings full support for Unicode, support for PerlIO and
+filehandle layers, restricted hashes as a replacement for pseudohashes,
+improved signal handling, further improved support for Windows, and a much
+more extensive regression test suite. The development version is Perl 5.9, and
+the next stable release will be (or may now be) Perl 5.10.
+
+In the future is Perl 6, a complete and fully object-oriented reimplementation
+and expansion of Perl from the ground up, and the Parrot virtual machine on
+which it will run. While radically differ- ent under the hood, Perl 6 will be
+sufficiently like Perl 5 that it will be possible to run most if not all Perl
+5 programs under it. A port of Perl 5 to the Parrot virtual machine called
+Ponie, which will be identically compatible with Perl 5.10, is also in the
+works—see http://www.poniecode.org for infor- mation. For more information on
+Parrot, see http://www.parrotcode.org. For Perl 6, see
+http://dev.perl.org/Perl6.
+
+5. Ferramentas (??)
+
+5.1. Editores de Texto
 
 Atenção: O editor é a arma mais potente no seu arsenal!
 
@@ -197,6 +276,14 @@ http://en.wikipedia.org/wiki/Compiling
 E é exatamente na palavra "prever"
 
 
+77. Perl e E-Mail
+
+Uma união mais do que estável e bem sucedida. Perl é a linguagem mais
+largamente empregada para tratar email (na prática não passa de texto). Boa
+parte do que você já leu, enviou, encaminhou, escreveu ou mandou para a
+lixeira do seu cliente de email, foi processado com Perl. Este tipo de
+comparação também pode ser feita com a internet hoje!
+
 
 
 
@@ -207,3 +294,7 @@ TODO:
       dentro de cada um dos três, falando sobre os subtópicos. Talvez até
       chegar a estudar um compilador simples, vamos ver o que agrega mais para
       as aulas;
+
+99. Bibliografia
+
+Pro Perl, Peter Wainwright ( ISBN: 1-59059-438-X )
