@@ -223,6 +223,33 @@ conhecido. Atualmente, ele está trabalhando no Perl 6.
 [3] http://en.wikipedia.org/wiki/Systems_administrator
 [4] http://en.wikipedia.org/wiki/NASA
 
+3. Quem usa Perl?
+
+A resposta não pode ser mais simples: praticamente todos nós, direta ou
+indiretamente.
+
+Perl foi fundamental para o crescimento e estruturação da internet como nós
+conhecemos hoje, visto que naquela época eram escassas as ferramentas para
+automatizar tarefas com a qualidade e a versatilidade de Perl. Outro fator
+importante é que ela nasceu em ambientes unix-like e nunca perdeu esta
+intimidade, e por suas qualidades, tornou-se a primeira escolha de quase todos
+os Sysadmins.
+
+Se você imaginar neste momento, qual o caminho que os pacotes percorrem da sua
+estação até ter acesso a internet, eu posso afirmar -- com certeza -- de que a
+sua conexão foi gerenciada ou auxiliada de alguma forma por uma ferramenta
+escrita em Perl.  Em todos os sistemas operacionais unix-like existem scripts
+Perl para as mais diversas tarefas dentro do sistema operacional.
+
+Com as informações acima, não é difícil imaginar todas as grande corporações,
+provedores, hostings, startups, que fazem uso do Perl.
+
+Assim como Hassan Schroeder, o primeiro webmaster da Sun afirmou: "Perl is the
+duct tape of the Internet.".
+
+Para saber mais:
+    http://www.oreillynet.com/pub/a/oreilly/perl/news/importance_0498.html
+
 5. Ferramentas (??)
 
 5.1. Editores de Texto
