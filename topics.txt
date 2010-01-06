@@ -2,7 +2,14 @@
 * História da linguagem;
 * Larry Wall;
 * Quem usa Perl?;
+
+
+
 * Cultura Perl;
+
+
+
+
 * Comunidade / ES;
 * Plataformas suportadas pelo Perl;
 * Perl no Windows;
@@ -31,3 +38,9 @@
 * Introdução Catalyst;
     * Template Toolkit 2;
     * DBIx::Class;
+
+
+#############################################################################
+
+TODO:
+    - Incluir os quadrinhos do XKCD falando sobre Perl;
