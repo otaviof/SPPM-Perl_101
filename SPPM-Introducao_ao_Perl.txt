@@ -385,6 +385,30 @@ saberá quando acontecerá o próximo acompanhando a nossa lista de discussão
 
 5. Plataformas Suportadas
 
+Agora que você já tem as bases sobre a cultura Perl e todo o embasamento
+teórico necessário, vamos nos focar a utilização desta linguagem. O primeiro
+passo é assegurar se a plataforma de sua preferência terá suporte.
+
+ * Unix-like: AIX, BSD/OS, Darwin, dgux, DYNIX/ptx, FreeBSD, Haiku, Linux
+   (ARM), Linux (i386), Linux (i586), Linux (PPC), HP-UX, IRIX, Mac OS X,
+   MachTen PPC, NeXT 3, NeXT 4, OpenBSD, OSF1, reliantunix-n, SCO_SV, SINIX-N,
+   sn4609, sn6521, sn9617, SunOS (sun4-solaris) , SunOS (i86pc-solaris) e
+   SunOS4;
+
+ * MSDOS-like: MS-DOS, PC-DOS, OS/2, Windows 3.1, Windows 95, Windows 98,
+   Windows ME, Windows NT (Alpha), Windows NT (PPC), Windows 2000, Windows XP,
+   Windows 2003, Windows CE, Windows Vista, Windows 7, Windows 2008 e Cygwin;
+
+Lembrando que o código escrito em Perl é portável dentre as plataformas,
+portando, com alguns cuidados é plenamente possível escrever códigos que
+funcionam nas 45 plataformas citadas aqui.
+
+É importante lembrar que a expansão do Perl em outras plataformas é
+constante, então, a nossa lista só tende a crescer.
+
+Para saber mais:
+    * http://perldoc.perl.org/perlport.html#PLATFORMS
+
 88. Ferramentas (??)
 
 88.1. Editores de Texto
@@ -404,12 +428,13 @@ A palavra "prever" é uma das pedras fundamentais para o trabalho de uma IDE,
 pois, ela ajuda o programador a entender e interagir com o _comportamento_ do
 software.
 
-    Por exemplo: Suponhamos que você criou uma nova variável: "my $test;",
-    agora, vamos nos lembrar quais tipos, ou seja, quais valores eu posso
-    atribuir a esta variável. Ao falar de Perl, nós já temos a resposta:
-    qualquer um! Agora, voltando ao trabalho das IDEs, você deve estar de
-    acordo comigo: este é um comportamento _muito_ mais complexo, se o
-    compararmos a uma linguagem estática.
+    Por exemplo:
+        Suponhamos que você criou uma nova variável: "my $test;", agora, vamos
+        nos lembrar quais tipos, ou seja, quais valores eu posso atribuir a
+        esta variável. Ao falar de Perl, nós já temos a resposta: qualquer um!
+        Agora, voltando ao trabalho das IDEs, você deve estar de acordo
+        comigo: este é um comportamento _muito_ mais complexo, se o
+        compararmos a uma linguagem estática.
 
 Porem, vamos voltar aos editores de texto, agora. Na contra-mão das IDEs,
 temos muitas vantagens:
