@@ -399,6 +399,8 @@ passo é assegurar se a plataforma de sua preferência terá suporte.
    Windows ME, Windows NT (Alpha), Windows NT (PPC), Windows 2000, Windows XP,
    Windows 2003, Windows CE, Windows Vista, Windows 7, Windows 2008 e Cygwin;
 
+ * Outras: Amiga DOS, BeOS e MPE/iX;
+
 Lembrando que o código escrito em Perl é portável dentre as plataformas,
 portando, com alguns cuidados é plenamente possível escrever códigos que
 funcionam nas 45 plataformas citadas aqui.
@@ -408,6 +410,16 @@ constante, então, a nossa lista só tende a crescer.
 
 Para saber mais:
     * http://perldoc.perl.org/perlport.html#PLATFORMS
+
+6. Instalação do Perl
+
+6.1 Unix-like
+
+6.1.2 Perl e unix-like
+
+6.2 Windows
+
+7. Documentação
 
 88. Ferramentas (??)
 
@@ -491,11 +503,11 @@ lixeira do seu cliente de email, foi processado com Perl. Este tipo de
 comparação também pode ser feita com a internet hoje!
 
 
-
+##############################################################################
 
 TODO:
-    * Ao falar sobre IDEs, editores de texto para desenvolvimento, é essencial
-      lebrar do Padre!
+    * Ao falar sobre IDEs, editores de texto para desenvolvimento, é
+      essencial lebrar do Padre!
     * Explicar os tempos: compilação e execução. Seria legal expandir um pouco
       dentro de cada um dos três, falando sobre os subtópicos. Talvez até
       chegar a estudar um compilador simples, vamos ver o que agrega mais para
