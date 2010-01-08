@@ -252,6 +252,9 @@ Para saber mais:
 
 4. A Cultura Perl
 
+Neste capítulo gostaria de deixar o Sr. Larry Wall dar as suas próprias
+opiniões a respeito:
+
   | 
   | Seriously though, if there iss a germ of an important idea in Perl
   | Culture, it's this: that too much control is just as deadly as too little
@@ -260,53 +263,46 @@ Para saber mais:
   | panic. Science, and art. ( Larry Wall )
   |
 
-We like to see that "There's more than one way to do it," because it breaks us
-out of our cultural preconceptions.
+  | 
+  | We like to see that "There's more than one way to do it," because it
+  | breaks us out of our cultural preconceptions. ( Larry Wall )
+  | 
 
-That works in Perl culture too. As you know, the slogan for Perl culture is,
-"There's more than one way to do it." Now, thinking in evolutionary terms,
-let's introduce an environmental change, say the move from Unix to Windows.
-Some of you know what the Perl slogan on Windows is, and you can say it with
-me: "It's a good thing there's more than one way to do it, because most of
-them don't work." But the right subset of Perl does survive. The dinosaurs
-will die off, and the monkeys will end up writing the poetry. Some of that
-poetry is even written in Perl, a language that can definitely be classified
-as "quirky".
+  | 
+  | But the right subset of Perl does survive. The dinosaurs will die off, and
+  | the monkeys will end up writing the poetry. Some of that poetry is even
+  | written in Perl, a language that can definitely be classified as
+  | "quirky". ( Larry Wall )
+  | 
 
-I happen to be of a school of linguistics called tagmemics. I can't hope to
-teach you all the buzzwords of tagmemics in a minute, but I can point out a
-basic principle of tagmemics. Every piece of language you care to talk about
-has a multi-part meaning, part of which is assigned to it by convention, and
-part of which comes from the context in which the expression finds itself. We
-know arbitrarily that "bed" is a noun. We also know that nouns can be used as
-verbs in English. That is, a part of speech can have a function other than
-that originally intended, if the environment of the expression is quirky
-enough. Think of it as evolution in action. Words can mutate. So you can take
-the noun "bed", and under the proper circumstances, you can "bed" someone.
-Presuming they have a bed method. Of course, one can always claim that in
-evolutionary terms, the genetic mixing of multiple inheritance is just a weird
-form of sex. 
+  | 
+  | We don't expect a native German speaker to use the same subset of English
+  | as a native Mandarin speaker.  Similarly, we don't look down on people for
+  | using subsets of Perl. ( Larry Wall )
+  | 
 
+  | 
+  | There are certainly enough of them. You can write Perl programs that resemble
+  | sed, or awk, or C, or Lisp, or Python. This is Officially Okay in Perl
+  | culture. By way of contrast, try writing in the C subset of C++ and they'll
+  | make a laughingstock of you. ( Larry Wall )
+  | 
 
+  | 
+  | But seriously, many computer scientists have fallen into the trap of
+  | trying to define languages like George Orwell's Newspeak, in which it is
+  | impossible to think bad thoughts. What they end up doing is killing the
+  | creativity of programming. 
+  |
 
+Além de mostrar as frases do célebre autor, quero ressaltar a importância da
+cultura em si. O intuito é ajudar as pessoas a entenderem o motivo daquele
+"pseudo-dogma" para que torne-se cultural, para que as pessoas realmente
+acreditem nestas preposições, é uma forma muito mais elegante e eficiente de
+influência um uso correto da linguagem, sem sacrificar a criatividade para
+isso.
 
-A corollary to that is, while we don't water down the language itself, we do
-allow people to speak subsets of the language. We don't expect a five-year-old
-to speak with the same diction as a fifty-year-old. We don't expect a native
-German speaker to use the same subset of English as a native Mandarin speaker.
-Similarly, we don't look down on people for using subsets of Perl. There are
-certainly enough of them. You can write Perl programs that resemble sed, or
-awk, or C, or Lisp, or Python. This is Officially Okay in Perl culture. By way
-of contrast, try writing in the C subset of C++ and they'll make a
-laughingstock of you.
-
-
-
-But seriously, many computer scientists have fallen into the trap of trying to
-define languages like George Orwell's Newspeak, in which it is impossible to
-think bad thoughts. What they end up doing is killing the creativity of
-programming. 
-
+É essencial pensar nestas colocações antes de continuar.
 
 Para saber mais:
     http://www.wall.org/~larry/keynote/keynote.html
