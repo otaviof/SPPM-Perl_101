@@ -292,7 +292,7 @@ opiniões a respeito:
   | But seriously, many computer scientists have fallen into the trap of
   | trying to define languages like George Orwell's Newspeak, in which it is
   | impossible to think bad thoughts. What they end up doing is killing the
-  | creativity of programming. 
+  | creativity of programming. ( Larry Wall ) 
   |
 
 Além de mostrar as frases do célebre autor, quero ressaltar a importância da
@@ -307,9 +307,87 @@ isso.
 Para saber mais:
     http://www.wall.org/~larry/keynote/keynote.html
 
-5. Ferramentas (??)
+4.1 Comunidade e Encontros Sociais
 
-5.1. Editores de Texto
+Depois desta dose "cultural" é natural concluir que os programadores Perl
+sejam unidos, afinal, eles dividem as mesmas crenças. Estes são os lugares:
+
+4.1.1 Perl Mongers
+
+O programador envolvido com a comunidade Perl e que acredita na cultura da
+linguagem é normalmente chamado de "Perl Monger".
+
+Em 1998 o primeiro grupo de programadores Perl foi criado por Brian D Foy [1]
+em Nova York, durante a primeira O'Reilly Perl Conference. A primeira idéia
+para o nome deste grupo era: /New York Perl M((o|u)ngers|aniacs)*/. Porem o
+"Monger" acabou ficando mais popular.
+
+Repare que a palavra "Monger" (ou Monge, em português) refere-se a fortes
+crenças na cultura da linguagem.
+
+[1] http://en.wikipedia.org/wiki/Brian_D_Foy
+
+Para saber mais:
+    * http://en.wikipedia.org/wiki/Perl_Monger
+
+4.1.2 Sites:
+
+ * http://perl.org
+    O principal endereço, com links para download da linguagem,
+    documentação, etc;
+
+ * http://www.perlmonks.com/
+    O principal forum da comunidade, onde você consegue encontrar ajuda para
+    qualquer problema relacionado a Perl. Tem um excelente histórico, poucas
+    perguntas ainda não foram respondidas. Também tem exemplos de código,
+    dicas de programação, perguntas e repostas, bibliotecas, entre outros;
+
+ * http://planet.perl.org/
+   http://ironman.enlightenedperl.org/
+   http://perlsphere.net/
+    Junção dos principais blogs sobre Perl;
+
+ * http://use.perl.org/
+    Novidades relativas a communidade, seu funcionamento é inspirado em uma
+    revista ou jornal;
+
+4.1.3 Comunidades Locais:
+
+Na cultura da linguagem também nasceu o costume de reuniões em grupos menores
+e unidos pela localização geográfica. O registro dos grupos pode ser
+encontrado no http://www.pm.org/.
+
+O grupo responsável por este documento é o São Paulo Perl Mongers
+(http://sao-paulo.pm.org/), formado em 2000.
+
+4.1.4 Lista de discussão e IRCs
+
+Outro costume da comunidade é manter-se em contato através de listas de
+discussão [1] e também dos canais IRC [2]. Oferecendo oportunidades para os
+participantes interagirem em problemas relacionados ao desenvolvimento Perl,
+boas práticas e troca de experiências.
+
+Aproveitamos este material para convidar a todos para participar de nossa
+lista e canal IRC:
+
+    * http://mail.pm.org/mailman/listinfo/saopaulo-pm
+    * irc.perl.org, #sao-paulo.pm
+
+[1] http://en.wikipedia.org/wiki/Electronic_mailing_list
+[2] http://en.wikipedia.org/wiki/IRC
+
+4.1.5 Encontros Sociais
+
+Este é outro item da nossa cultura. Encontros periódicos, para um happy-hour
+no qual o assunto principal é Perl, extremamente divertido e produtivo. Você
+saberá quando acontecerá o próximo acompanhando a nossa lista de discussão
+(São Paulo Perl Mongers).
+
+5. Plataformas Suportadas
+
+88. Ferramentas (??)
+
+88.1. Editores de Texto
 
 Atenção: O editor é a arma mais potente no seu arsenal!
 
@@ -369,7 +447,7 @@ Para saber mais:
 [4] http://www.jedit.org/
 [5] http://padre.perlide.org/
 
-9. Compiladores
+77. Compiladores
 
 Falar sobre compiladores e sobre o compilador Perl, primeiramente
 
@@ -379,7 +457,7 @@ http://en.wikipedia.org/wiki/Compiling
 E é exatamente na palavra "prever"
 
 
-77. Perl e E-Mail
+66. Perl e E-Mail
 
 Uma união mais do que estável e bem sucedida. Perl é a linguagem mais
 largamente empregada para tratar email (na prática não passa de texto). Boa
