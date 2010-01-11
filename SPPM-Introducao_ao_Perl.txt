@@ -528,7 +528,16 @@ dependências, na instalação local.
 
 6.2 Windows
 
-7. Documentação
+Este curso está focado em ambientes unix-like, acima foi demostrando a
+instalação da linguagem nos seus "sabores" mais comuns. Porem, não vamos
+deixar o leitor e usuário dos ambientes baseados em Microsoft Windows
+desamparados, seguem as referências técnicas para o orientar:
+
+http://win32.perl.org/wiki/index.php?title=Main_Page
+http://www.activestate.com/activeperl/
+http://www.perl.com/download.csp#win32
+
+7. Documentação do Perl
 
 88. Ferramentas (??)
 
