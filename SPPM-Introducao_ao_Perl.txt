@@ -413,9 +413,118 @@ Para saber mais:
 
 6. Instalação do Perl
 
+Para conitunar com este curso, nós agora devemo saber instalar o Perl. Aqui
+cobriremos os sistemas operacionais mais comumente utilizado, tanto no meio
+acadêmico quanto corporativo.
+
 6.1 Unix-like
 
-6.1.2 Perl e unix-like
+6.1.1 FreeBSD
+
+Ao fazer isso no FreeBSD nós temos duas opções:
+
+ * Ports:
+
+Cada port contêm todas as instruções necessárias para fazer os fontes
+originais do projeto compilarem e serem executados no FreeBSD. Ao instalar um
+"Port" o Makefile [1] busca automaticamente os fontes da aplicacação desejada,
+tanto em disco local quanto remoto (HTTP/FTP), em seguida, os fontes são
+decompactados em um diretório. O próximo passo é aplicar os pathes necessários
+(a maioria deles visa compatibiliade com o FreeBSD), após, os fontes já estão
+prontos para compilar.
+
+A seguir, esta apostila vai demonstar os poucos comandos necessários para
+cumprir todos os procedimentos listados acima -- portanto, é presumido que o
+leitor esteja com acesso ao terminal (local, virtual ou remoto). Segue:
+
+# uname -a
+    FreeBSD bsd.domain.com.br 8.0-RELEASE-p2 FreeBSD 8.0-RELEASE-p2 #0: Tue
+    Jan  5 21:11:58 UTC 2010
+    root@amd64-builder.daemonology.net:/usr/obj/usr/src/sys/GENERIC amd64
+
+# cd /usr/ports/lang/perl5.10 && make install clean
+
+Note que o primeiro comando é apenas uma demonstração de qual a versão
+empregada do sistema; o segundo, é praticamente todo o trabalho necessáiro,
+com execessão de responder algumas simples perguntas durante o processo.
+
+Para saber mais:
+    http://www.freebsd.org/doc/en/books/developers-handbook/tools-make.html
+
+ * Packages:
+
+Os packages consistem em instalar um pacote préviamente compilados. Alguns
+cluster são empregados pelo time de desenvolvimento do FreeBSD para compilar o
+máximo de pacotes possíveis estas plataformas: alpha, amd64, ARM, i386, ia64,
+MIPS, PC98, PPC, Sparc64, Sun4v e Xbox.
+
+Para isso, basta:
+
+# pkg_add -rv perl5.10
+
+Reparece que isso consiste apenas em dois comandos, sendo um deles o nome do
+pacote que nós desejamos. Esta forma de instalação cobre também todas as
+dependências necessárias, ou seja, para instalar o Perl você vai precisar
+instalar susas dependências, e o FreeBSD Package System fará isso por você.
+
+6.1.2 GNU/Linux
+
+O projeto Linux está disposto de forma diferente, se compararmo-os ao FreeBSD.
+Pois o Linux é representado enquanto sistema operacial porque grupos de
+usuários fazem versões customizadas e mais completas, estas são chamadas
+distribuições. Abaixo, mostraremos exemplos nos dois principais tipos de
+distribuições atualmente.
+
+Para Linux, não será demostrado uma forma de compilar os fontes, vamos nos
+focar em usar os mecanismos da forma como a distribuição recomenda.
+
+6.1.2.1 Debian's Like
+
+É o padrão da distribuição ter o interpretador Perl instalado, sendo que
+inúmeros de seus scripts básicos são feitos nesta linguagem. 
+
+A forma como o Debian mantêm os seus pacotes é de forma binária, a exemplo da
+maioria das outras distribuições Linux. Isso denota o fato de nós instalarmos
+arquivos pré-compilados no seu SO. Estes são feitos com auxílio de inúmeros
+colaboradores do projeto, um trabalho meticuloso para deixar muitos softwares
+a disposição de seus usuários.
+
+Se houver alguma customização do SO, ou qualquer outra situação em que o Perl
+não esteja instalado, poremos seguir os procedimentos para reverter esta
+situação:
+
+# apt-get update && apt-get install perl
+
+Novamente, o exempo de instalação assume que você está com a sua base de
+pacotes atualizada, vide o primeiro comando. O segundo toma conta de tudo mais
+o que é necessário, download, desempacotar, instalar e registrar perante a
+base do SO.
+
+Em um futuro próximo o projeto Debian vai usar mais Perl. O substituto do APT
+é o projeto denominado Cupt [1], o qual é escrito em Perl. 
+
+[1] http://wiki.debian.org/Cupt
+
+6.1.2.2 Red Hat's Like
+
+O projeto Red Hat é a distribuição mais antiga de Linux, nela o recomendado é
+fazer uso da ferramenta RPM (Red Hat Package Manager) [1]. Da mesma forma como
+no Debian, nós vamos fazer uso de uma versão préfiamente customizada (em
+alguns casos), compilada e empacotada pelo time de desenvolvimento da Red Hat,
+com auxílio de inúmeros colaboradores do projeto.
+
+Nesta tipo de distribuição o normal é que o interpretador Perl venha instalado
+por padrão, já que esta faz parte da sua construção. Se em casos específicos o
+interpretador Perl não esteja presente, execute os comandos abaixo:
+
+# yum update && yum install perl
+
+O primeiro comando é apenas um gancho para recomendar que a base de pacotes
+esteja sempre atualizada. O segundo dá inicio a cadeia de ações necessárias
+para baixar, interpretar e fazer a instalação dos componentes, bem como suas
+dependências, na instalação local.
+
+[1] http://en.wikipedia.org/wiki/RPM_Package_Manager
 
 6.2 Windows
 
