@@ -2,24 +2,26 @@
 * História da linguagem;
 * Larry Wall;
 * Quem usa Perl?;
-
-
-
 * Cultura Perl;
-
-
-
-
 * Comunidade / ES;
 * Plataformas suportadas pelo Perl;
+
 * Perl no Windows;
+    * Instalação;
+    * ?
+
 * Perl e os unixes-like;
+
 * Documentação (Perldoc);
+    * Livros;
+    * Sites;
+    * Terminal;
 * Estruturas:
     * Scalares;
     * Arrays;
     * Hashes;
     * Estruturas Complexas;
+* Variáveis especiais;
 * Estruturas de repetição, condições e operadores;
 * Tratamento de arquivos;
 * Expressões Regulares;

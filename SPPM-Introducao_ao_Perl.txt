@@ -539,6 +539,27 @@ http://www.perl.com/download.csp#win32
 
 7. Documentação do Perl
 
+O projeto em torno da linguagem Perl nunca esqueceu de manter e aumentar a sua
+documentação. Hoje, podemos afimar que a documentação do Perl em si, e seus
+módulos são extremamente completos, uma base sólida para o estudente e para 
+usuário da linguagem.
+
+Tudo isso tem suas bases no Perldoc. Esta é a forma para ler e buscar
+informações na documentação, para isso existem duas formas principais,
+explicadas a seguir.
+
+7.1 Perldoc no Site
+
+ * Com auxílio do Browser: http://perldoc.perl.org/
+
+7.2 Perldoc no Terminal
+    
+ * Com auxílio do Terminal: $ perldoc
+
+Algumas instalações de Perl não incluem por padrão o Perldoc por isso é
+importante certificar-se disso. Para isso, utilize o gerenciador de pacotes do
+seu SO, e verifique se existe referência ao "perldoc".
+
 88. Ferramentas (??)
 
 88.1. Editores de Texto
