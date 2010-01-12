@@ -541,24 +541,98 @@ http://www.perl.com/download.csp#win32
 
 O projeto em torno da linguagem Perl nunca esqueceu de manter e aumentar a sua
 documentação. Hoje, podemos afimar que a documentação do Perl em si, e seus
-módulos são extremamente completos, uma base sólida para o estudente e para 
-usuário da linguagem.
+módulos são extremamente completos, uma base sólida para o estudente, usuário
+da linguagem. Para uma linguagem ser produtiva, o acesso a documentação deve
+ser rápido e eficiente, afinal, nós programadores precisamos consultar
+constantemente as propriedades de um módulo, exemplos de utilização, entre
+outros.
 
-Tudo isso tem suas bases no Perldoc. Esta é a forma para ler e buscar
-informações na documentação, para isso existem duas formas principais,
-explicadas a seguir.
+Enquanto falamos de Perl, o projeto que cuida da sua documentação é o Perldoc,
+este não passa de uma ferramenta para procurar e interpretar os arquivos tipo
+"pod".
+
+ * Pod ("Plain Old Documentation") [1]: É uma linguagem de marcação ("Markup
+   Language" [2]) simples e fácil de usar, com o propósito de documentar
+   softwares escritos em Perl e seus módulos;
+
+Esta é a forma para ler e buscar informações na documentação, para isso
+existem duas formas principais, explicadas a seguir.
+
+[1] http://perldoc.perl.org/perlpod.html
+[2] http://en.wikipedia.org/wiki/Markup_language
 
 7.1 Perldoc no Site
 
- * Com auxílio do Browser: http://perldoc.perl.org/
+O site do Perldoc (http://perldoc.perl.org/) é relativamente novo, com grandes
+melhorias na navegação, busca, indexes, sintaxe, entre outros. No site você
+também consegue fazer download das páginas em PDF ou HTML. Para o aluno,
+iniciante, o mais indicado é começar a fazer a leitura da documentação através
+do site, visto que este é uma interface mais intuitiva e amigável.
 
 7.2 Perldoc no Terminal
-    
- * Com auxílio do Terminal: $ perldoc
 
-Algumas instalações de Perl não incluem por padrão o Perldoc por isso é
-importante certificar-se disso. Para isso, utilize o gerenciador de pacotes do
-seu SO, e verifique se existe referência ao "perldoc".
+Outra forma de acessar o conteúdo do Perldoc é através da linha de comando.
+Exemplo:
+
+ | 
+ | $ perldoc perldoc
+ | 
+
+Observe, nós estamos passando um argumento para o comando, este indica qual
+documentação nós queremos ler. Normalmente, o Perldoc organiza a documentação
+que faz parte do "core" da linguagem com o sufixo "perl".
+
+  Exemplos:
+    perl, perl5004delta, perl5005delta, perl561delta, perl56delta,
+    perl570delta, perl571delta, perl572delta, perl573delta, perl581delta,
+    perl582delta, perl583delta, perl584delta, perl585delta, perl586delta,
+    perl587delta, perl588delta, perl589delta, perl58delta, perlaix, perlamiga,
+    perlapi, perlapio, perlapollo, perlartistic, perlbeos, perlbook, perlboot,
+    perlbot, perlbs2000, perlcall, perlce, perlcheat, perlclib, perlcn,
+    perlcommunity, perlcompile, perlcygwin, perldata, perldbmfilter,
+    perldebguts, perldebtut, perldebug, perldelta, perldgux, perldiag,
+    perldoc, perldos, perldsc, perlebcdic, perlembed, perlepoc, perlfaq,
+    perlfaq1, perlfaq2, perlfaq3, perlfaq4, perlfaq5, perlfaq6, perlfaq7,
+    perlfaq8, perlfaq9, perlfilter, perlfork, perlform, perlfreebsd, perlfunc,
+    perlglossary, perlgpl, perlguts, perlhack, perlhist, perlhpux, perlhurd,
+    perlintern, perlintro, perliol, perlipc, perlirix, perljp, perlko,
+    perllexwarn, perllinux, perllocale, perllol, perlmachten, perlmacos,
+    perlmacosx, perlmint, perlmod, perlmodinstall, perlmodlib, perlmodstyle,
+    perlmpeix, perlnetware, perlnewmod, perlnumber, perlobj, perlop,
+    perlopenbsd, perlopentut, perlos2, perlos390, perlos400, perlothrtut,
+    perlpacktut, perlplan9, perlpod, perlpodspec, perlport, perlqnx, perlre,
+    perlrebackslash, perlrecharclass, perlref, perlreftut, perlreguts,
+    perlrequick, perlreref, perlretut, perlriscos, perlrun, perlsec,
+    perlsolaris, perlstyle, perlsub, perlsyn, perlthrtut, perltie, perltoc,
+    perltodo, perltooc, perltoot, perltrap, perltru64, perltw, perlunicode,
+    perlunifaq, perluniintro, perlunitut, perlutil, perluts, perlvar,
+    perlvmesa, perlvms, perlvos, perlwin32, perlxs e perlxstut;
+
+A quantidade de exemplos não tem o intuito de deixar o leitor iniciante
+confuso, apenas de mostrar a enorme quantidade de documentação que a linguagem
+tem. Este é um pequeno exemplo, a saber.
+
+7.3 Livros
+
+A quantidade de livros sobre a linguagem é quase tão grande quanto o Perldoc.
+Para o leitor que prefere uma interação com um livro tradicional, não vão
+faltar opções: http://books.perl.org/books , somente nesta página são 266
+livros. Para o iniciante, seguem os títulos mais recomendados:
+
+ * Beginning Perl Web Development: From Novice to Professional (Suehring);
+ * Beginning Perl, Second Edition;
+ * Higher-Order Perl (Dominus);
+ * Learning Perl Objects, References & Modules (Schwartz, Phoenix);
+ * Learning Perl on Win32 Systems (Olsen, Schwartz, Christiansen);
+ * Learning Perl, 4th ed. (Schwartz, Phoenix, foy);
+ * Mastering Perl (foy);
+ * Mastering Regular Expressions, Second Edition (Friedl);
+ * Modern Perl Programming;
+ * Network Programming with Perl (Stein);
+ * Object Oriented Perl (Conway);
+ * Perl Best Practices (Conway);
+ * Perl Cookbook, 2nd ed. (Torkington, Christiansen);
+ * Writing Perl Modules for CPAN (Tregar);
 
 88. Ferramentas (??)
 
