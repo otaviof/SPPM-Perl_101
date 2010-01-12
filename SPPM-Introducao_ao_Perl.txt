@@ -616,16 +616,16 @@ tem. Este é um pequeno exemplo, a saber.
 
 A quantidade de livros sobre a linguagem é quase tão grande quanto o Perldoc.
 Para o leitor que prefere uma interação com um livro tradicional, não vão
-faltar opções: http://books.perl.org/books , somente nesta página são 266
+faltar opções: http://books.perl.org/books, somente nesta página são 266
 livros. Para o iniciante, seguem os títulos mais recomendados:
 
  * Beginning Perl Web Development: From Novice to Professional (Suehring);
- * Beginning Perl, Second Edition;
+ * Beginning Perl, Second Edition (James Lee);
  * Higher-Order Perl (Dominus);
  * Learning Perl Objects, References & Modules (Schwartz, Phoenix);
  * Learning Perl on Win32 Systems (Olsen, Schwartz, Christiansen);
- * Learning Perl, 4th ed. (Schwartz, Phoenix, foy);
- * Mastering Perl (foy);
+ * Learning Perl, 4th ed. (Schwartz, Phoenix, Brian d Foy);
+ * Mastering Perl (Brian d Foy);
  * Mastering Regular Expressions, Second Edition (Friedl);
  * Modern Perl Programming;
  * Network Programming with Perl (Stein);
@@ -633,6 +633,107 @@ livros. Para o iniciante, seguem os títulos mais recomendados:
  * Perl Best Practices (Conway);
  * Perl Cookbook, 2nd ed. (Torkington, Christiansen);
  * Writing Perl Modules for CPAN (Tregar);
+
+8. Executando os Programas em Perl
+
+Agora nós estamos partindo para a parte mais voltada a prática, deste
+material. O primeiro passo é saber como os programas em Perl serão
+executados. Basicamente, existem duas formas para isso:
+
+8.1 Interpretador
+
+A forma mais simples, é chamar o interpretador diretamente via linha de
+comando:
+
+ | 
+ | $ perl hello_world.pl
+ | 
+
+Veja que o parametro para o interpretador é o caminho de um arquivo contendo
+código válido Perl, neste caso acima, o arquivo está no mesmo diretório.
+
+Outra forma de usar o interpretador diretamente, é:
+
+ | 
+ | $ perl -e 'print "Hello Perl World!";'
+ | 
+
+Esta segunda forma nos dá muita praticidade para o dia-a-dia, pois pode
+funcionar como ferramenta para linha de comando, com todo o poder de Perl,
+exemplo:
+
+ | 
+ | $ cat /etc/passwd \ 
+ |      | perl -ne 'print $1, "\n" if ( /^(\w+):.*?$/ );' \
+ |      | head
+ | root
+ | toor
+ | daemon
+ | operator
+ | bin
+ | tty
+ | kmem
+ | games
+ | news
+ | man
+ |
+
+8.2 Script Executável
+
+O outro jeito de executar um software escrito em Perl é, gravar todo ele em um
+arquivo e o transformar em um executável. Veja os exemplos:
+
+ | 
+ | $ echo '#!/usr/bin/env perl' > /var/tmp/test.pl
+ | $ echo 'print "Hello, Perl World!";' >> /var/tmp/test.pl
+ |
+
+Repare que na primeira linha do script é uma indicação de quem vai interpretar
+os dados que estão nas linhas seguintes, o nome desta entrada é Shebang [1].
+Nós poderiamos informar o binário do Perl diretamente, por exemplo:
+"/usr/bin/perl" ou "/usr/local/bin/perl" (dependendo de onde ele foi
+instalado), no entanto, com o auxílio do "env" (/usr/bin) [2] nós podemos
+simplificar.
+
+Agora que nós já vemos um script válido, vamos dar permissão de execução:
+
+ |
+ | $ chmod +x /var/tmp/test.pl
+ |
+
+E testar:
+
+ |
+ | $ /var/tmp/test.pl
+ | Hello, Perl World!
+ | 
+
+[1] http://en.wikipedia.org/wiki/Shebang_%28Unix%29
+[2] http://linux.die.net/man/1/env
+
+9. Sintaxe
+
+Todos os statements são terminados por ";"
+Variáveis são indicadas por caracteres especiais "$", "%", "@"
+Funções são chamadas por seu nome seguido de "()" ou "&"
+Referências são feitas com "\" seguindo do nome do método ou variável
+Blocos especiais __DATA__ (verificar outros)
+Variáveis pré existentes ($ perldoc perlvar)
+
+10. Estrutura da Linguagens
+
+Após fazer toda a apresentação da linguagem, incluindo sua história,
+documentação e conceitos básicos de programação, chegou a hora de colocarmos
+os nossos conhecimentos em prática com Perl.
+
+Este capítulo é dedicado a apresentar as estruturas da linguagem, e dar
+exemplos para o seu uso no dia-a-dia.
+
+10.1 Scalar
+10.2 Arrays
+10.3 Hashes
+10.4 Estruturas Complexas
+
 
 88. Ferramentas (??)
 
@@ -653,13 +754,13 @@ A palavra "prever" é uma das pedras fundamentais para o trabalho de uma IDE,
 pois, ela ajuda o programador a entender e interagir com o _comportamento_ do
 software.
 
-    Por exemplo:
-        Suponhamos que você criou uma nova variável: "my $test;", agora, vamos
-        nos lembrar quais tipos, ou seja, quais valores eu posso atribuir a
-        esta variável. Ao falar de Perl, nós já temos a resposta: qualquer um!
-        Agora, voltando ao trabalho das IDEs, você deve estar de acordo
-        comigo: este é um comportamento _muito_ mais complexo, se o
-        compararmos a uma linguagem estática.
+  Por exemplo:
+    Suponhamos que você criou uma nova variável: "my $test;", agora, vamos nos
+    lembrar quais tipos, ou seja, quais valores eu posso atribuir a esta
+    variável. Ao falar de Perl, nós já temos a resposta: qualquer um!  Agora,
+    voltando ao trabalho das IDEs, você deve estar de acordo comigo: este é um
+    comportamento _muito_ mais complexo, se o compararmos a uma linguagem
+    estática.
 
 Porem, vamos voltar aos editores de texto, agora. Na contra-mão das IDEs,
 temos muitas vantagens:
