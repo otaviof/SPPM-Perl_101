@@ -713,12 +713,24 @@ E testar:
 
 9. Sintaxe
 
-Todos os statements são terminados por ";"
-Variáveis são indicadas por caracteres especiais "$", "%", "@"
-Funções são chamadas por seu nome seguido de "()" ou "&"
-Referências são feitas com "\" seguindo do nome do método ou variável
-Blocos especiais __DATA__ (verificar outros)
-Variáveis pré existentes ($ perldoc perlvar)
+####### RASCUNHO #######
+
+ * Todos os statements são terminados por ";";
+ * Variáveis são indicadas por caracteres especiais "$", "%", "@";
+ * Funções são chamadas por seu nome seguido de "()" ou "&";
+ * Referências são feitas com "\" seguindo do nome do método ou variável;
+ * Blocos especiais __DATA__ (verificar outros);
+ * Variáveis pré existentes ($ perldoc perlvar);
+
+ * Operadores numéricos:
+ * Comparação de números;
+ * Comparação de Texto;
+ * Operadores Lógicos;
+ * Condições;
+ * Estrutura de repetição;
+
+ * Concatenar texto;
+
 
 10. Estrutura da Linguagens
 
@@ -734,6 +746,8 @@ exemplos para o seu uso no dia-a-dia.
 10.3 Hashes
 10.4 Estruturas Complexas
 
+15. Módulos
+15.1 CPAN
 
 88. Ferramentas (??)
 

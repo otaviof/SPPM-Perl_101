@@ -9,24 +9,39 @@
 * Perl no Windows;
     * Instalação;
     * ?
-
 * Perl e os unixes-like;
-
 * Documentação (Perldoc);
     * Livros;
-    * Sites;
     * Terminal;
+    * Sites;
+
+
+(10)
 * Estruturas:
     * Scalares;
     * Arrays;
     * Hashes;
     * Estruturas Complexas;
+
+
+
+
+(11)
 * Variáveis especiais;
+
+(12)
 * Estruturas de repetição, condições e operadores;
+
+(13)
 * Tratamento de arquivos;
+
+(14)
 * Expressões Regulares;
+
+(15)
 * Módulos;
-* CPAN;
+    * CPAN;
+
 * Boas práticas:
     * Agile;
     * TDD;
@@ -34,13 +49,16 @@
     * DRY;
     * Testes de Aceiação;
     * Testes de Integração;
+
 * Orientação a Objetos com Moose;
+
 * Perl para Web;
+
 * O Passado com os CGIs;
+
 * Introdução Catalyst;
     * Template Toolkit 2;
     * DBIx::Class;
-
 
 #############################################################################
 
