@@ -11,19 +11,19 @@ Flexível, portável, versátil, e disponível para todos, Perl cresceu de um
 substituto simples para Shell Scripts, a uma linguagem completa e de propósito
 geral.
 
-Esta popular, rica em recursos está ganhando ainda mais popularidade enquanto
-adquire mais "features" a cada nova versão.
-
-bug:
- * isso não é uma verdade quando falamos do Perl 5, afinal, fazem anos que
-   nós estamos esperando o Perl 6;
+Esta popular, rica em recursos está ganhando ainda mais terreno enquanto
+adquire mais "features" a cada nova versão ou extensão. Assim como fez o
+Moose [1], que trouxe uma grande melhora em Orientação a Objetos para o Perl
+5, inspirado no Perl 6.
 
 Uma característica particular, porem muito poderosa, do Perl é a sua
 implementação de bibliotecas com módulos, o qual a fez uma linguagem
 genuinamente extensível
 
-com a sua clareza, estrutura lógica e abordagem prática, este guia é ideal
+Com a sua clareza, estrutura lógica e abordagem prática, este guia é ideal
 para guiar e acompanhar o leitor ao mundo Perl.
+
+[1] http://www.iinteractive.com/moose/
 
 1.1 Conceitos de programação
 
@@ -734,20 +734,26 @@ E testar:
 
 10. Estrutura da Linguagens
 
-Após fazer toda a apresentação da linguagem, incluindo sua história,
-documentação e conceitos básicos de programação, chegou a hora de colocarmos
-os nossos conhecimentos em prática com Perl.
+Após fazer toda a apresentação sobre o que envolve a linguagem, incluindo sua
+história, documentação e conceitos básicos de programação, chegou a hora de
+colocarmos os nossos conhecimentos em prática com Perl.
 
 Este capítulo é dedicado a apresentar as estruturas da linguagem, e dar
 exemplos para o seu uso no dia-a-dia.
 
 10.1 Scalar
+
 10.2 Arrays
 10.3 Hashes
 10.4 Estruturas Complexas
 
 15. Módulos
 15.1 CPAN
+
+16. Boas Práticas
+
+Perl Best Pratices
+A verdade sobre o d
 
 88. Ferramentas (??)
 
