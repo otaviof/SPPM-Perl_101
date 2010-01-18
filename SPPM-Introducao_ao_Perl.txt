@@ -752,8 +752,155 @@ exemplos para o seu uso no dia-a-dia.
 
 16. Boas Práticas
 
-Perl Best Pratices
-A verdade sobre o d
+As boas práticas são as bases para implementações de sucesso, muitas vezes
+mais importantes do que a linguagem em si. Portanto, mesmo este sendo um curso
+dedicado a ensinar sobre Perl, é imprescindível tocarmos nesta temática.
+
+16.1 Agile e Metodologias de Trabalho
+
+Desenvolvimento de software utilizando os conceitos de "Agile" [1] refere-se
+às metodologias baseadas em interações, onde requisitos e soluções são
+desenvolvidos de forma colaborativa, entre times auto-organizados e
+multi-funcionais. O termo "Agile" (Ágil, em português) foi cunhado através do
+Manifesto Ágil [2], de 2001.
+
+Ao citar o manifesto, devemos deixar claro seus valores:
+
+ * Interações e indivíduos são mais importantes do que processos e
+   ferramentas;
+ * Software funcional, livre de bugs, é mais importante do que uma boa
+   documentação;
+ * Colaboração com o cliente é mais importante do que um contrato;
+ * Responder a mudança é mais importante do que seguir o plano inicial;
+
+Como pode ser visto pelos valores acima, nós temos um fator cultural muito
+forte, com o intuito de ser mais eficiente para o que nós vivemos atualmente,
+pois é reflexo da experiência e experimentação.
+
+Os métodos do Agile, geralmente exigem um gerenciamento de projetos
+disciplinado, que encoraja frequentemente a inspeção e a adaptação, uma
+filosofia de liderança que encoraja o trabalho em equipe, a auto-organização,
+e uma série de boas práticas de engenharia. Tudo isso para levar ao objetivo
+principal: uma entrega rápida de um software de altíssima qualidade, com
+proximidade a abordagem do empreendimento beneficiado, alinhando o
+desenvolvimento do software, necessidades do cliente e os objetivos da
+corporação.
+
+As bases conceituais para esta metodologia, são:
+ * Lean (http://en.wikipedia.org/wiki/Lean_manufacturing);
+ * Soft Systems Methodology
+   (http://en.wikipedia.org/wiki/Soft_systems_methodology);
+ * Speech act (http://en.wikipedia.org/wiki/Speech_act);
+ * Six Sigma (http://en.wikipedia.org/wiki/Six_Sigma);
+
+[1] http://en.wikipedia.org/wiki/Agile_software_development
+[2] http://en.wikipedia.org/wiki/Agile_Manifesto
+
+16.2 Version Control System (VCS)
+
+Ou traduzindo o termo: "Sistema de Controle de Versão".  É o sistema para
+gerenciar as mudanças em documentos, programas ou qualquer outro tipo de
+informação guardada em arquivos de um computador. O seu uso mais comum está
+relacionado ao desenvolvimento de software, onde os programadores, guardam
+suas mudanças. Estas são geralmente identificadas com um número, denominado
+versão.
+
+Ter um sistema destes enquanto existe desenvolvimento de um software, nos
+possibilita:
+
+ * Ter um histórico detalhado sobre todo o desenvolvimento do software;
+ * Trabalho colaborativo, entre grupos distribuídos;
+ * Junção de partes diferentes em um mesmo código-fonte, conhecido como
+   "merge";
+ * Centralização do trabalho feito;
+ * Voltar a um estado anterior para corrigir um bug, ou fazer uma mudança;
+
+Para saber mais:
+    http://en.wikipedia.org/wiki/Git_%28software%29
+    http://en.wikipedia.org/wiki/Version_control_system
+    http://git-scm.com/
+    http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html
+
+16.3 Test Driven Development (TDD)
+
+Em uma tradução livre, TDD [1] significa: Desenvolvimento de Software
+Orientado a Testes. Consistem em uma técnica para desenvolvimento de software
+que apoia-se na repetição de um ciclo bastante curto: primeiro o programador
+desenvolve um teste (obviamente automatizado) no qual ele ira retornar falha,
+quando executado, então, o programador produz código para que simplesmente
+passe no teste, o último passo é refatorar, para que os fontes mantenham
+padrões aceitáveis de qualidade.
+
+Existem muitos benefícios em usar TDD:
+
+ * TDD implica em escrever mais testes, e em um estudo realizado em 2005 [2],
+   mostra que programadores que escrevem mais testes, são mais produtivos;
+ * Ter mais testes, aumenta a qualidade do código;
+ * Programadores usando TDD em projetos novos, afirmam que existe uma menor
+   utilização do "debug". Porque, em conjunto com o controle de versão [3],
+   quando os testes falham inesperadamente, pode-se simplesmente voltar a
+   versão onde os testes não falham, e refazer o código problemático;
+ * Dar passos menores, durante o desenvolvimento, permite ao programador ter
+   mais foco na primeira tarefa: fazer o primeiro teste passar. Gerenciar
+   exceções e erros não são considerados iniciais. Testes para implementar
+   situações desta natureza são feitos de forma separada, e todo o código é
+   coberto por testes, aumentando a sua confiabilidade;
+ * Enquanto é verdade de que mais código é necessário para escrever softwares
+   com TDD, afinal, existe o montante necessário para os testes em si, na
+   maioria dos casos o montante final de código escrito é menor [4]. Os testes
+   são essenciais para detectar os problemas na primeiras fases do código, e
+   consequentemente, prevenindo que estes se transformem em uma epidemia em
+   fases mais adiantadas, e que o programador não escreve mais código para a
+   correção, ao invés de evitar o problema no início;
+ * O TDD direciona o desenvolvimento para ser mais flexível, extensível e
+   modularizado. Este efeito vem porque a metologia exige que o programador
+   pense no software como peças pequenas que devem ser escritas e testadas de
+   forma independente, para depois serem integrados como um conjunto;
+
+[1] http://en.wikipedia.org/wiki/Test-driven_development
+[2] http://www.nrc-cnrc.gc.ca/eng/ibp/iit.html
+[3] http://en.wikipedia.org/wiki/Version_control_system
+[4] http://www.ipd.uka.de/mitarbeiter/muellerm/publications/edser03.pdf
+
+16.4 Continuous Integration (CI)
+
+A tradução para o nosso idioma é "Integração Contínua". 
+
+When embarking on a change, a developer takes a copy of the current code base
+on which to work. As changed code is submitted to the repository by other
+developers, this copy gradually ceases to reflect the repository code. When
+the developer submits code to the repository they must first update their code
+to reflect the changes in the repository since they took their copy. The more
+changes there are to the repository, the more work the developer must do
+before submitting their own changes.
+
+Eventually, the repository may become so different from the developer's
+baseline that they enter what is sometimes called "integration hell",[1] where
+the time it takes to integrate is greater than the time it took to make their
+original changes. In a worst case scenario, the changes the developer is
+making may have to be discarded and the work redone.
+
+Continuous Integration is the practice of integrating early and often, so as
+to avoid the pitfalls of "integration hell". The ultimate goal is to reduce
+timely rework and thus reduce cost and time.
+
+The rest of this article discusses best practice in how to achieve continuous
+integration, and how to automate this practice (automation is considered a
+best practice itself).
+
+Imagine-se trabalhando em um grande projeto de software, você é um programador
+em uma equipe. Cada um de vocês está escrevendo uma parte do projeto,
+trabalhando em recursos diferentes. Porem, quando você faz uma mudança no seu
+fonte, deve considerar as mudanças que já foram submetidas para o repositório
+principal, porque elas podem influenciar muito no seu trabalho. Este
+procedimento é chamado "Integração" (Integration).
+
+
+16.5 DRY
+
+16.6 Testes de Aceitação
+
+16.7 Testes de Integração
 
 88. Ferramentas (??)
 
