@@ -747,9 +747,22 @@ exemplos para o seu uso no dia-a-dia.
 10.3 Hashes
 10.4 Estruturas Complexas
 
-15. Módulos
+11. Variáveis Especiais
 
-15.1 CPAN
+12. Estruturas da Linguagem
+12.1 Estruturas de Repetição
+12.2 Estruturas Condicionais
+12.3 Operadores
+
+13. Variáveis Especiais
+
+14. Tratamento de Arquivos
+
+15. Expressões Regulares
+
+16. Módulos
+
+16.1 CPAN
 
 Trabalhamos com Ciências da Computação, somos em parte cientistas,
 logicamente. Sabemos que a melhor forma de aprender algo é através do seu
@@ -779,9 +792,9 @@ A CPAN também é uma das formas mais fáceis de se obter o Perl, propriamente
 dito. Lá é mantida uma cópia muito atualizada do projeto que envolve o seu
 interpretador. 
 
-[1] $ perl -e 'print time();' nos retorna 1263868440;
+[1] $ perl -e 'print time();' nos retorna "1263868440";
 
-15.1.1 CPAN: Exemplo Prático 
+16.1.1 CPAN: Exemplo Prático 
 
 Sabemos sua a utilidade e queremos vê-la em funcionamento:
 
@@ -871,13 +884,13 @@ Outra opção, porem, esta deve ser chamada a partir do shell, é:
  | > install Bundle::CPAN
  | 
 
-16. Boas Práticas
+17. Boas Práticas
 
 As boas práticas são as bases para implementações de sucesso, muitas vezes
 mais importantes do que a linguagem em si. Portanto, mesmo este sendo um curso
 dedicado a ensinar sobre Perl, é imprescindível tocarmos nesta temática.
 
-16.1 Agile e Metodologias de Trabalho
+17.1 Agile e Metodologias de Trabalho
 
 Desenvolvimento de software utilizando os conceitos de "Agile" [1] refere-se
 às metodologias baseadas em interações, onde requisitos e soluções são
@@ -917,7 +930,7 @@ As bases conceituais para esta metodologia, são:
 [1] http://en.wikipedia.org/wiki/Agile_software_development
 [2] http://en.wikipedia.org/wiki/Agile_Manifesto
 
-16.2 Version Control System (VCS)
+17.2 Version Control System (VCS)
 
 Ou traduzindo o termo: "Sistema de Controle de Versão".  É o sistema para
 gerenciar as mudanças em documentos, programas ou qualquer outro tipo de
@@ -942,7 +955,7 @@ Para saber mais:
     http://git-scm.com/
     http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html
 
-16.3 Test Driven Development (TDD)
+17.3 Test Driven Development (TDD)
 
 Em uma tradução livre, TDD [1] significa: Desenvolvimento de Software
 Orientado a Testes. Consistem em uma técnica para desenvolvimento de software
@@ -983,7 +996,7 @@ Existem muitos benefícios em usar TDD:
 [3] http://en.wikipedia.org/wiki/Version_control_system
 [4] http://www.ipd.uka.de/mitarbeiter/muellerm/publications/edser03.pdf
 
-16.4 Continuous Integration (CI)
+17.4 Continuous Integration (CI)
 
 A tradução para o nosso idioma é "Integração Contínua". Imagine-se trabalhando
 em um grande projeto de software, você é um programador em uma equipe. Cada um
@@ -1004,7 +1017,7 @@ Para saber mais:
     http://hudson-ci.org/
     http://en.wikipedia.org/wiki/Continuous_integration
 
-16.5 DRY
+17.5 DRY
 
 Esta sigla é em inglês e pode ter duas formas de representar o seu conceito:
 
@@ -1048,7 +1061,7 @@ Leia mais:
 [6] http://en.wikipedia.org/wiki/Software_build
 [7] http://www.artima.com/intv/dry.html
 
-16.6 Testes de Aceitação
+17.6 Testes de Aceitação
 
 Consistem em automatizar a forma como uma aplicação está respondendo através
 de sua interface final para o cliente ou quem vai consumir este serviço. Para
@@ -1059,7 +1072,7 @@ simular, de forma sequencial e prevista, a interação de um usuário comum na
 interface. A ideia neste tipo de teste é cobrir todas as funcionalidades da
 ferramenta.
 
-16.7 Testes de Integração
+17.7 Testes de Integração
 
 Quando estamos escrevendo testes, durante o desenvolvimento no código-fonte,
 nós fazemos testes unitários, ou seja, cada unidade escrita terá uma rotina
@@ -1074,7 +1087,7 @@ grupo especialista, dedicado somente a testar.
 Leia mais:
     http://en.wikipedia.org/wiki/Integration_testing
 
-16.8 Conclusão: Automação
+17.8 Conclusão: Automação
 
 Uma conclusão para este capítulo é a respeito de uma prática que nós repetimos
 em, quase todas, as boas condutas citadas anteriormente: automatizar. Esta é a
