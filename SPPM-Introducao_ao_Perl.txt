@@ -864,37 +864,24 @@ Existem muitos benefícios em usar TDD:
 
 16.4 Continuous Integration (CI)
 
-A tradução para o nosso idioma é "Integração Contínua". 
+A tradução para o nosso idioma é "Integração Contínua". Imagine-se trabalhando
+em um grande projeto de software, você é um programador em uma equipe. Cada um
+de vocês está escrevendo uma parte do projeto, trabalhando em recursos
+diferentes. Porem, quando você faz uma mudança no seu fonte, deve considerar
+as mudanças que já foram submetidas para o repositório principal, porque elas
+podem influenciar muito no seu trabalho. Este procedimento é chamado
+"Integração" (Integration). O que pode complicar todo este processo, é quando
+o desenvolvedor fica muito tempo sem fazer isso, então, nós temos um sério
+problema para resolver.
 
-When embarking on a change, a developer takes a copy of the current code base
-on which to work. As changed code is submitted to the repository by other
-developers, this copy gradually ceases to reflect the repository code. When
-the developer submits code to the repository they must first update their code
-to reflect the changes in the repository since they took their copy. The more
-changes there are to the repository, the more work the developer must do
-before submitting their own changes.
+Uma boa prática para toda esta situação é automatizar este trabalho, no qual
+um software reune os fontes escritos pelos participantes do projeto e executa
+a suite de testes.
 
-Eventually, the repository may become so different from the developer's
-baseline that they enter what is sometimes called "integration hell",[1] where
-the time it takes to integrate is greater than the time it took to make their
-original changes. In a worst case scenario, the changes the developer is
-making may have to be discarded and the work redone.
-
-Continuous Integration is the practice of integrating early and often, so as
-to avoid the pitfalls of "integration hell". The ultimate goal is to reduce
-timely rework and thus reduce cost and time.
-
-The rest of this article discusses best practice in how to achieve continuous
-integration, and how to automate this practice (automation is considered a
-best practice itself).
-
-Imagine-se trabalhando em um grande projeto de software, você é um programador
-em uma equipe. Cada um de vocês está escrevendo uma parte do projeto,
-trabalhando em recursos diferentes. Porem, quando você faz uma mudança no seu
-fonte, deve considerar as mudanças que já foram submetidas para o repositório
-principal, porque elas podem influenciar muito no seu trabalho. Este
-procedimento é chamado "Integração" (Integration).
-
+Para saber mais:
+    http://wiki.hudson-ci.org/display/HUDSON/Meet+Hudson
+    http://hudson-ci.org/
+    http://en.wikipedia.org/wiki/Continuous_integration
 
 16.5 DRY
 
