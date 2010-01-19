@@ -804,9 +804,72 @@ aqui que nós vamos executar os próximos comandos.
 
 2) Continundo o exemplo, vamos instalar um módulo simples:
 
-> install Test::More
+ | 
+ | [1]> install Test::More
+ | CPAN: Storable loaded ok (v2.19)
+ | Going to read /home/otaviof/.cpan/Metadata
+ |   Database was generated on Wed, 11 Nov 2009 15:28:14 GMT
+ | CPAN: LWP::UserAgent loaded ok (v5.834)
+ | CPAN: Time::HiRes loaded ok (v1.9719)
+ | Fetching with LWP:
+ |   http://www.perl.org/CPAN/authors/01mailrc.txt.gz
+ | CPAN: YAML loaded ok (v0.70)
+ | Going to read /home/otaviof/.cpan/sources/authors/01mailrc.txt.gz
+ | CPAN: Compress::Zlib loaded ok (v2.015)
+ | ............................................................................DONE
+ | Fetching with LWP:
+ |   http://www.perl.org/CPAN/modules/02packages.details.txt.gz
+ | Going to read /home/otaviof/.cpan/sources/modules/02packages.details.txt.gz
+ |   Database was generated on Tue, 19 Jan 2010 12:39:07 GMT
+ | ...............
+ |   New CPAN.pm version (v1.9402) available.
+ |   [Currently running version is v1.9301]
+ |   You might want to try
+ |     install CPAN
+ |     reload cpan
+ |   to both upgrade CPAN.pm and run the new version without leaving
+ |   the current session.
+ | 
+ | 
+ | .............................................................DONE
+ | Fetching with LWP:
+ |   http://www.perl.org/CPAN/modules/03modlist.data.gz
+ | Going to read /home/otaviof/.cpan/sources/modules/03modlist.data.gz
+ | ............................................................................DONE
+ | Going to write /home/otaviof/.cpan/Metadata
+ | 
 
-> install Bundle::CPAN
+Observe que os primeiros passos da instalação são dedicados a acessar o
+repositório e obter as informações para realizar esta operação.
+
+3) Para verificar quais as extensões/módulos estão instalados no seu
+computador, basta utilizar o comando "r", veja o exemplo:
+
+ | 
+ | cpan[3]> r
+ | 
+ | Package namespace         installed    latest  in CPAN file
+ | Attribute::Handlers         0.78_03      0.87  SMUELLER/Attribute-Handlers-0.87.tar.gz
+ | AutoLoader                     5.67      5.70  SMUELLER/AutoLoader-5.70.tar.gz
+ | (...)
+ | Net::SNMP                    v5.2.0    v6.0.0  DTOWN/Net-SNMP-v6.0.0.tar.gz
+ | Pod::Man                       1.37      2.23  RRA/podlators-2.3.0.tar.gz
+ | Term::ANSIColor                1.12      2.02  RRA/ANSIColor-2.02.tar.gz
+ | Text::Tabs                2007.1117 2009.0305  MUIR/modules/Text-Tabs+Wrap-2009.0305.tar.gz
+ | 226 installed modules have no parseable version number
+ | 
+
+Outra opção, porem, esta deve ser chamada a partir do shell, é:
+
+ | 
+ | $ perl -MCPAN -e 'CPAN::Shell->install(CPAN::Shell->r)'
+ | 
+
+4) A própria CPAN está disponível para ser instalada via CPAN:
+
+ | 
+ | > install Bundle::CPAN
+ | 
 
 16. Boas Práticas
 
@@ -982,18 +1045,19 @@ Leia mais:
 [3] http://pragprog.com/the-pragmatic-programmer
 [4] http://en.wikipedia.org/wiki/Database_schema
 [5] http://en.wikipedia.org/wiki/Database_system
-[6] 
-[7] DRY Techniques
+[6] http://en.wikipedia.org/wiki/Software_build
+[7] http://www.artima.com/intv/dry.html
 
 16.6 Testes de Aceitação
 
 Consistem em automatizar a forma como uma aplicação está respondendo através
 de sua interface final para o cliente ou quem vai consumir este serviço. Para
 isso nós devemos ter em mãos uma ferramenta para simular estas interações, que
-pode ser, por exemplo, o navegador (browser). Para isso temos ferramentas como
-WWW::Mechanize ou SeleniumHQ. O foco dos dois é simular, de forma sequencial e
-prevista, a interação de um usuário comum na interface. A ideia neste tipo de
-teste é cobrir todas as funcionalidades da ferramenta.
+pode ser, por exemplo, o navegador (browser). Afim de automatizar, temos
+ferramentas como WWW::Mechanize (no Perl) ou SeleniumHQ. O foco dos dois é
+simular, de forma sequencial e prevista, a interação de um usuário comum na
+interface. A ideia neste tipo de teste é cobrir todas as funcionalidades da
+ferramenta.
 
 16.7 Testes de Integração
 
@@ -1013,11 +1077,11 @@ Leia mais:
 16.8 Conclusão: Automação
 
 Uma conclusão para este capítulo é a respeito de uma prática que nós repetimos
-em quase todas as boas condutas citadas anteriormente: automatizar. Esta é a chave
-para o nosso controle e histórico. Se uma operação precisa ser feita duas vezes,
-conclui-se que nós devemos deixá-la guardada em forma de script, ou, descrição
-automatizada dos procedimentos. Perl é uma linguagem adequada e competente
-para esta tarefa.
+em, quase todas, as boas condutas citadas anteriormente: automatizar. Esta é a
+chave para o nosso controle e histórico. Se uma operação precisa ser feita
+duas vezes, conclui-se que nós devemos deixá-la guardada em forma de script,
+ou, descrição automatizada dos procedimentos. Perl é uma linguagem adequada e
+competente para esta tarefa.
 
 Também fica outra observação: ao versionar um projeto, ele deve ser feito por
 completo, tudo o que é necessário para ele funcionar deve estar sendo citado
@@ -1026,7 +1090,9 @@ completo, tudo o que é necessário para ele funcionar deve estar sendo citado
 Apesar de haver muitos procedimentos para um bom projeto, não é nossa intenção
 de apresentar práticas de execução complexa e trabalhosa, nossa intenção é
 deixar claro a importância da simplicidade, quanto mais simples melhor, menos
-é mais. KISS (Keep It Simple Stupid).
+é mais. KISS (Keep It Simple Stupid) [1].
+
+[1] http://en.wikipedia.org/wiki/KISS_principle
 
 88. Ferramentas (??)
 
