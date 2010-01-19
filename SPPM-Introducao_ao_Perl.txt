@@ -748,7 +748,65 @@ exemplos para o seu uso no dia-a-dia.
 10.4 Estruturas Complexas
 
 15. Módulos
+
 15.1 CPAN
+
+Trabalhamos com Ciências da Computação, somos em parte cientistas,
+logicamente. Sabemos que a melhor forma de aprender algo é através do seu
+significado, e neste assunto em particular, estamos tratando da CPAN.
+
+ -- CPAN: Comprehensive Perl Archive Network --
+
+Sendo este o maior repositório de bibliotecas existente. Possivelmente, um dos
+maiores monumentos da comunidade open-source: atualmente com 7932
+colaboradores, 77874 módulos, 19458 distribuições e 61037 uploads [1].
+
+Portanto ao procurar soluções em Perl, um dos primeiros lugares de procura
+será a CPAN (http://cpan.org ou http://search.cpan.org).
+
+Além de centralizar, ela nos provê acesso para:
+
+* Buscas por nomes, conteúdo, descrição;
+* Instalação do conteúdo, biblioteca, software;
+* Visualização do conteúdo (fontes, documentação);
+* Manutenção, principalmente upgrades ou downgrades;
+
+Perl também é conhecido como o canivete suíço das linguagens de programação,
+definitivamente a CPAN amplifica o poder de uma ferramenta tão útil e versátil
+como esta.
+
+A CPAN também é uma das formas mais fáceis de se obter o Perl, propriamente
+dito. Lá é mantida uma cópia muito atualizada do projeto que envolve o seu
+interpretador. 
+
+[1] $ perl -e 'print time();' nos retorna 1263868440;
+
+15.1.1 CPAN: Exemplo Prático 
+
+Sabemos sua a utilidade e queremos vê-la em funcionamento:
+
+1) Já temos o nosso interpretador Perl instalado no sistema operacional, e a
+instalação padrão demonstrada, inclui um binário chamado "cpan". Observe:
+
+ |
+ | 
+ | $ cpan
+ | 
+ | cpan shell -- CPAN exploration and modules installation (v1.9402)
+ | Enter 'h' for help.
+ | 
+ | cpan[1]>   
+ | 
+ |
+
+Ele nos apresenta um shell interativo para manipulação. De agora em diante, é
+aqui que nós vamos executar os próximos comandos.
+
+2) Continundo o exemplo, vamos instalar um módulo simples:
+
+> install Test::More
+
+> install Bundle::CPAN
 
 16. Boas Práticas
 
