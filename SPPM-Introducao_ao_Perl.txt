@@ -922,14 +922,53 @@ Leia mais:
 [1] http://en.wikipedia.org/wiki/Andy_Hunt_%28author%29
 [2] http://en.wikipedia.org/wiki/Dave_Thomas_%28programmer%29
 [3] http://pragprog.com/the-pragmatic-programmer
-[4] Database Schemas
-[5] Databases
-[6] Building System
+[4] http://en.wikipedia.org/wiki/Database_schema
+[5] http://en.wikipedia.org/wiki/Database_system
+[6] 
 [7] DRY Techniques
 
 16.6 Testes de Aceitação
 
+Consistem em automatizar a forma como uma aplicação está respondendo através
+de sua interface final para o cliente ou quem vai consumir este serviço. Para
+isso nós devemos ter em mãos uma ferramenta para simular estas interações, que
+pode ser, por exemplo, o navegador (browser). Para isso temos ferramentas como
+WWW::Mechanize ou SeleniumHQ. O foco dos dois é simular, de forma sequencial e
+prevista, a interação de um usuário comum na interface. A ideia neste tipo de
+teste é cobrir todas as funcionalidades da ferramenta.
+
 16.7 Testes de Integração
+
+Quando estamos escrevendo testes, durante o desenvolvimento no código-fonte,
+nós fazemos testes unitários, ou seja, cada unidade escrita terá uma rotina
+para assegurar o seu funcionamento. Porem, os Testes de Integração tem o
+propósito de juntar o sistema, ou tudo o que foi feito até o momento, e
+testá-lo em conjunto. Para isso, é feito um plano para fazer estes testes, o
+qual costuma ser relativamente complexo, todo este procedimento deve crescer
+conforme o software é entregue, aumentar a cada ciclo previsto de trabalho.
+Pode ser feita pela própria equipe, programador individualmente, ou por um
+grupo especialista, dedicado somente a testar.
+
+Leia mais:
+    http://en.wikipedia.org/wiki/Integration_testing
+
+16.8 Conclusão: Automação
+
+Uma conclusão para este capítulo é a respeito de uma prática que nós repetimos
+em quase todas as boas condutas citadas anteriormente: automatizar. Esta é a chave
+para o nosso controle e histórico. Se uma operação precisa ser feita duas vezes,
+conclui-se que nós devemos deixá-la guardada em forma de script, ou, descrição
+automatizada dos procedimentos. Perl é uma linguagem adequada e competente
+para esta tarefa.
+
+Também fica outra observação: ao versionar um projeto, ele deve ser feito por
+completo, tudo o que é necessário para ele funcionar deve estar sendo citado
+(por sua documentação) ou, preferencialmente, presente no domínio do projeto.
+
+Apesar de haver muitos procedimentos para um bom projeto, não é nossa intenção
+de apresentar práticas de execução complexa e trabalhosa, nossa intenção é
+deixar claro a importância da simplicidade, quanto mais simples melhor, menos
+é mais. KISS (Keep It Simple Stupid).
 
 88. Ferramentas (??)
 
