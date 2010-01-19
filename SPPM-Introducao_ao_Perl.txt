@@ -885,6 +885,48 @@ Para saber mais:
 
 16.5 DRY
 
+Esta sigla é em inglês e pode ter duas formas de representar o seu conceito:
+
+ * Don't Repeat Yourself (DRY): o que nós podemos traduzir para "Não se
+   repeita"; e
+ * Duplication is Evil (DIE): Duplicações são Malignas, em português;
+
+As duas frases acima devem ser lembradas constantemente por um programador.
+Afinal, os códigos-fonte para nós nada mais são do que texto, e por este
+motivo nós podemos ficar tentandos a tratá-los simplesmente como tal e usar as
+ferramentas de copiar e colar. Neste ponto nós passamor a ter um problema.
+
+The DRY principle is stated as "Every piece of knowledge must have a single,
+unambiguous, authoritative representation within a system." The principle has
+been formulated by Andy Hunt and Dave Thomas in their book The Pragmatic
+Programmer.
+
+They apply it quite broadly to include "database schemas, test plans, the
+build system, even documentation."[1]
+
+O princípio desta boa prática esta ligado ao conceito de que cada peça de
+conhecimento deve ter uma única representação em um sistema. Este princípio
+foi formulado por Andy Hunt [1] e Dave Thomas [2] no livro "The Pragmatic
+Programmer" [3]. Neste livro os autores mostram como aplicar este princípio em
+várias partes de um projeto, inclindo Schemas [4] para Databases [5], planos
+de testes, compilação (building) [6] e até documentação.
+
+Quando o princípio DRY é aplicado com sucesso, a modificação de um único
+elemento não modifica outro elemento, não relacionado. Adicionalmente,
+elementos que são relacionados de forma lógica, todas as suas mudanças são
+previsíveis e uniformes. Existem muitas técnicas para executar o DRY [7].
+
+Leia mais:
+    http://en.wikipedia.org/wiki/DRY
+
+[1] http://en.wikipedia.org/wiki/Andy_Hunt_%28author%29
+[2] http://en.wikipedia.org/wiki/Dave_Thomas_%28programmer%29
+[3] http://pragprog.com/the-pragmatic-programmer
+[4] Database Schemas
+[5] Databases
+[6] Building System
+[7] DRY Techniques
+
 16.6 Testes de Aceitação
 
 16.7 Testes de Integração
