@@ -762,6 +762,36 @@ exemplos para o seu uso no dia-a-dia.
 
 16. Módulos
 
+Um módulo é um componente contendo código-fonte Perl para uso específico. Este
+é o mecanismo onde o Perl reúne fontes em um mesmo "namespace" [1], no qual um
+módulo pode conter outros. Esta forma de organização pode ser comparado com
+uma classe, enquanto programação Orientada a Objetos é aplicada, porem, estes
+dois conceitos são diferentes, isso deve estar claro ao leitor.
+
+Uma coleção de módulos, acompanhando documentação, sistema de
+compilação/instalação e, geralmente, uma suite de testes, compõem uma
+distribuição do Perl. Um exemplo disso é a CPAN, porem, com grandes
+proporções.
+
+Como nós já citamos, Perl é uma linguagem que suporta estilos diferentes de
+programação, portanto, você pode encontrar módulos escritos de forma
+procedural [2] (por exemplo Test::Simple [3]), Orientado a Objetos (por
+exemplo o XML::Parser [4]), os dois considerados igualmente válidos, seguindo
+todas as atribuições que um módulo deve ter.  Módulos também pode ser usados
+de forma mista, a exemplo do DBIx::Class [5], ou ainda, ser uma prática
+(pragma) como o "strict.pm" [6], o qual toma medidas perante o código, logo
+após ser invocado.  Um módulo em Perl pode até afetar a sintaxe da linguagem
+introduzindo uma DSL [7], assim como o Moose [8] o faz.
+
+[1] http://en.wikipedia.org/wiki/Namespace
+[2] http://en.wikipedia.org/wiki/Procedural_programming
+[3] http://search.cpan.org/~mschwern/Test-Simple-0.94/lib/Test/Simple.pm
+[4] http://search.cpan.org/~msergeant/XML-Parser-2.36/Parser.pm
+[5] http://search.cpan.org/~frew/DBIx-Class-0.08115/lib/DBIx/Class.pm
+[6] http://search.cpan.org/~dapm/perl-5.10.1/lib/strict.pm
+[7] http://en.wikipedia.org/wiki/Domain-specific_language
+[8] http://search.cpan.org/~drolsky/Moose-0.94/lib/Moose.pm
+
 16.1 CPAN
 
 Trabalhamos com Ciências da Computação, somos em parte cientistas,

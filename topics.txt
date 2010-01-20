@@ -60,7 +60,19 @@
     * Template Toolkit 2;
     * DBIx::Class;
 
+Encaixar exercícios práticos
+Fazer um Dojô com os alunos?
+
+    Todos os alunos devem resolver o código em dupla, e a cada 5 minutos, eu
+    troco o piloto com o co-piloto. Quando uma dupla finalizar o exercício,
+    ela pode, se for covidada, ajudar outras duplas.
+
+    Porem, como seria a parte de testes nestes casos? Seria possível ensinar
+    oa alunos a programar já fazendo o uso de testes?
+
 #############################################################################
 
 TODO:
     - Incluir os quadrinhos do XKCD falando sobre Perl;
+    - Débito Técnico, comentar um pouco sobre assunto, com o intuito de
+      enfatizar ao aluno a importância de ter boas práticas;
