@@ -781,18 +781,27 @@ Exemplos:
  | my $reference = \@complex_array;    # ARRAY(0x600f58)
  | 
 
-#!/usr/bin/env perl
+Agora um exemplo um pouco mais avançado, mostrando que até métodos podem ser
+passados como referencia:
 
-use strict;
-use warnings;
+ | 
+ | #!/usr/bin/env perl
+ | 
+ | use strict;
+ | use warnings;
+ | 
+ | sub method { print @_, "\n"; }
+ | 
+ | my $reference = \&method;
+ | 
+ | &{$reference}("string");
+ | 
+ | __END__
+ | 
 
-sub method {
-    print "Test\n";
-}
-
-my $reference = \&method;
-
-exec $reference;
+O exemplo acima também mostra como Perl é uma linguagem dinâmica no seu
+interior, e demostra também a forma como o interpretador usa para chamar
+determinadas rotinas.
 
 10.2 Arrays
 10.3 Hashes
