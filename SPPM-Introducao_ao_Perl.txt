@@ -769,6 +769,31 @@ Saiba mais:
 
 [1] http://en.wikipedia.org/wiki/Device_file
 
+10.1.1 Referências
+
+Ao mesmo temo que o scalar é o tipo mais simples, ele pode guardar referências
+para estruturas mais complexas, no Perl nós chamamos isso de referência.
+
+Exemplos:
+
+ | 
+ | my $reference = \%complex_hash;     # HASH(0x600e78)
+ | my $reference = \@complex_array;    # ARRAY(0x600f58)
+ | 
+
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+sub method {
+    print "Test\n";
+}
+
+my $reference = \&method;
+
+exec $reference;
+
 10.2 Arrays
 10.3 Hashes
 10.4 Estruturas Complexas
