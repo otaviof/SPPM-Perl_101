@@ -743,6 +743,32 @@ exemplos para o seu uso no dia-a-dia.
 
 10.1 Scalar
 
+Um scalar é o dado mais simples que o Perl manipula. Podendo ser tanto um
+número como uma string de caracteres. No entanto, você pode imaginar um número
+e uma string como estruturas muito diferentes, porem, o Perl as usa de forma
+muito parecida, portanto são descritas juntas.
+
+Exemplos:
+
+ | 
+ | my $test = q{Hello, Perl World!};    # Hello, Perl World!
+ | my $test = "I'm a String!";          # I'm a String!
+ | my $test = 123456;                   # 123456
+ | my $test = "123456";                 # 123456
+ | my $test = "123" . "456";            # 123456
+ | my $test = 123 + 456;                # 579
+ | 
+
+Um valor scalar também pode atuar sobre operadores, como mostrado nos exemplos
+acima, repare que ao final existe um comentário com o valor esperado na
+variável "$test". Também, um scalar pode ser guardado dentro do outro, e podem
+ser guardados dentro de devices [1] ou arquivos texto.
+
+Saiba mais:
+    http://perldoc.perl.org/functions/scalar.html
+
+[1] http://en.wikipedia.org/wiki/Device_file
+
 10.2 Arrays
 10.3 Hashes
 10.4 Estruturas Complexas
