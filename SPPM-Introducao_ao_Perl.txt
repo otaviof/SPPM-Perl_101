@@ -804,6 +804,105 @@ interior, e demostra também a forma como o interpretador usa para chamar
 determinadas rotinas.
 
 10.2 Arrays
+
+Array é simplesmente uma lista ordenada de dados, ou seja, um tipo espacial de
+variável que suporta uma lista no Perl. Cada elemento do array é um scalar em
+separado, com um valor scalar.
+
+Arrays em Perl podem ter qualquer número de elementos. O menor array é o que
+tem zero elementos, enquanto o maior, pode preencher toda a memória
+disponível. Mantendo uma filosofia do Perl de não manter limites
+desnecessários.
+
+Exemplos:
+
+ | 
+ | my @week = ( "Mon", "Tue", "Web", "Thu", "Fry" );
+ | my @week = ( 1,     2,     3,     4,     5 );
+ | my @week = ( [ 1, 2, 3 ], [ 4, 5, 6 ] );
+ | 
+
+10.2.1 Indexes nos Arrays
+
+Cada elemento em um array Perl tem uma posição, no qual, a primeira é sempre
+zero. Também possuem tamanho dinâmico, sendo possível incluir um elemento ao
+final, a qualquer momento.
+
+Para saber o tamanho de um array, basta incluir um "#" logo após a
+representação scalar de um array:
+
+ |
+ | my @week = ( "Mon", "Tue", "Web", "Thu", "Fry" );
+ | print $#week;    # 4
+ |
+
+O aluno, neste momento pode estar um pouco confuso a respeito da representação
+scalar de um array. Esta funciona como uma referência, explicada há poucos
+capítulos atrás, para o array.
+
+Uma outra forma de receber a representação scalar, é incluir o método scalar
+[1]:
+
+ |
+ | my @week = ( "Mon", "Tue", "Web", "Thu", "Fry" );
+ | print scalar @week;    # 5
+ |
+
+Porem, neste segundo exemplo existe uma diferença entre os resultados. O
+causador desta discrepância é que neste último, nós estamos trazendo o array
+para um contexto scalar e diferentemente do anterior, nós não estamos pedindo
+o número de elementos de uma lista. No contexto scalar, elementos não tem
+indexes zero.
+
+Agora que citamos a palavra "index" é necessário explicar como eles funcionam
+em um array, ou seja, todo elemento tem um número correspondente. Podemos
+demonstrar isso com mais um exemplo:
+
+ |
+ | my @week = ( "Mon", "Tue", "Web", "Thu", "Fry" );
+ | print $week[4];        # Fry
+ |
+
+[1] http://perldoc.perl.org/functions/scalar.html
+
+10.2.2 Funções para Manipular Listas/Arrays
+
+Por padrão o Perl já nos deixa métodos para manipular as listas, neste
+capítulo vamos citar os mais importantes e comuns:
+
+ * push [1]: Este método serve para incluir um elemento em um array, porem,
+   sempre ao final dele, por este motivo, o "push" sempre requer um ou mais
+   argumentos. Exemplo:
+
+     |
+     | my @week = ( "Mon", "Tue", "Web", "Thu", "Fry" );
+     | push @week, "Sat";     # Mon, Tue, Web, Thu, Fry, Sat
+     |
+
+ * pop [2]: Este método faz exatamente ao inverso do "push", ele retira um
+   elemento do final de um array. Exemplo:
+
+     |
+     | my @week = ( "Mon", "Tue", "Web", "Thu", "Fry" );
+     | pop @week;             # Mon, Tue, Web, Thu
+     |
+
+ * shift [3]: Basicamente, este método faz o mesmo que o "pop", porem, ele não
+   age ao final do array, e sim no seu início. Exemplo:
+
+     |
+     | my @week = ( "Mon", "Tue", "Web", "Thu", "Fry" );
+     | shift @week;           # Tue, Web, Thu, Fry
+     |
+
+Os métodos apresentados aqui são para funções básicas, no entanto, tenha a
+certeza de que o leitor irá encontrar muitos módulos para as mais diversas
+funções com arrays dentro da CPAN.
+
+[1] http://perldoc.perl.org/functions/push.html
+[2] http://perldoc.perl.org/functions/pop.html
+[3] http://perldoc.perl.org/functions/shift.html
+
 10.3 Hashes
 10.4 Estruturas Complexas
 
