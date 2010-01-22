@@ -904,6 +904,99 @@ funções com arrays dentro da CPAN.
 [3] http://perldoc.perl.org/functions/shift.html
 
 10.3 Hashes
+
+Um Hash [](também conhecido como Array Associativo [1]) é uma estrutura parecida
+com um Array, o qual foi apresentado a pouco, uma coleção de variáveis tipo
+Scalar, com elementos individuais servindo como índice para esta estrutura. Ao
+contrário de um Array, os índices não são elementos pequenos, com valores
+inteiros não-negativos, são valores tipo scalar arbitrariamente escolhidos,
+estes são chamados de "keys" (ou chaves, em português), e são utilizados para
+obter o dado de uma determinada parte do Hash.
+
+A forma mais fácil de entender um Hash, é olhar para os exemplos:
+
+ | 
+ | my %hash = {
+ |     chave  => "valor",
+ |     numero => 1,
+ |     objeto => \$referencia,
+ | };
+ | 
+
+Agora, a forma de obter os dados desta estrutura será assim:
+
+ | 
+ | $hash{chave} == "valor";
+ | 
+
+O método mais utilizado, é o "keys" [2]. Veja um exemplo:
+
+ | 
+ | foreach my $k ( keys %hash ) {
+ |     print "chave: $k -> valor: $hash{$k}\n";
+ | }
+ | 
+
+O método "keys" é utilizado para obter somente as chaves de um Hash, fazendo
+seu retorno em forma de um array.
+
+Porem, existem outros métodos:
+
+ * each [3]: Quando invocado em um contexto de lsita, ele retorna dois
+   elementos consecutivos, no qual o primeiro é a chave e o segundo é o valor,
+   e assim sucessivamente para o Hash. Portanto você pode iterar [7] sobre a
+   estrutura, veja:
+
+     | 
+     | while ( my ( $key, $value ) = each %hash ) {
+     |     print "chave: $key -> valor: $value\n";
+     | }
+     | 
+
+ * delete [4]: Se você informar como parâmetro um elemento de um Hash, ou
+   Array, ele vai deletar o elemento especificado, e, como retorno deste
+   método é utilizado o valor antigo da parte que está sendo removida, veja o
+   exemplo:
+
+     | 
+     | my $scalar = delete $hash{numero}; # 1
+     | 
+
+ * exists [5]: Informando como parâmetro um elemento de um Hash ou Array, este
+   método nos retornará "true" [8] (verdadeiro). Veja:
+
+     | 
+     | print "Existe\n" if exists $hash{chave};
+     |
+
+ * values [6]: Retorna uma lista somente com os valores que um Hash contêm,
+   este método faz o inverso do "keys":
+
+     | 
+     | foreach my $value ( values %hash ) {
+     |     print "value: $value\n";
+     | }
+     | 
+
+Observe atentamente o funcionamento do Hash em Perl, porque ele é largamente
+utilizado para os elementos estruturais da linguagem, por ser extremamente
+flexível. Outro fator de atenção é que estruturas no padrão Hash são, também,
+muito utilizadas em outros sistemas computacionais, como caches, bancos de
+dados não-relacionais, etc.
+
+Para saber mais:
+    http://www.cs.mcgill.ca/~abatko/computers/programming/perl/howto/hash/
+    http://www.perl.com/pub/a/2006/11/02/all-about-hashes.html
+
+[1] http://en.wikipedia.org/wiki/Associative_array
+[2] http://perldoc.perl.org/functions/keys.html
+[3] http://perldoc.perl.org/functions/each.html
+[4] http://perldoc.perl.org/functions/delete.html
+[5] http://perldoc.perl.org/functions/exists.html
+[6] http://perldoc.perl.org/functions/values.html
+[7] http://en.wikipedia.org/wiki/Iteration#Computing
+[8] http://en.wikipedia.org/wiki/Boolean_algebra_%28logic%29
+
 10.4 Estruturas Complexas
 
 11. Variáveis Especiais
