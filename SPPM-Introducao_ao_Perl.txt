@@ -1028,6 +1028,92 @@ Para saber mais:
 
 11. Variáveis Especiais
 
+Na sua concepção Perl incluiu algumas variáveis especiais dentro do
+interpretador que podem ser manipuladas durante a execução de um software,
+para alterar o seu comportamento, ou, acrescentar mais produtividade, abaixo
+as principais variáveis serão mostradas.
+
+11.1 Contexto "local"
+
+Algumas das variáveis abaixo não devem ser utilizadas sem prévio cuidado,
+afim de não alterar o funcionamento padrão de um software, sem a precaução e
+conhecimento necessários. Portanto, antes de alterar o valor de uma variável
+destas certifique-se que será apenas no contexto "local". Exemplo:
+
+ | 
+ | open my $fh, '<', '/etc/passwd'
+ |     or die $!;
+ | local $/ = " ";
+ | foreach my $line (<$fh>) {
+ |     print $line, "\n";
+ | }
+ | close($fh);
+ | 
+
+Para saber mais:
+    http://perldoc.perl.org/functions/local.html
+
+11.2 Relativas ao Filehandle
+
+ * $|
+   Se o seu valor estiver diferente de zero, ele forçará o software a fazer o
+   flush do STDOUT (saída padrão) após cada "write" ou "print";
+
+ * $=
+   Mostra qual o tamanho de um arquivo, ou seja a quantidade de linhas
+   horizontais;
+
+ * $-
+   Número de linhas que resta no arquivo, ou seja, após imprimir algumas delas
+   o Perl mostra quantas ainda faltam;
+
+11.3 Variáveis Globais Especiais
+
+ * $_
+   Esta é a variável especial mais utilizada no Perl. Sua função é receber
+   os elementos de uma estrutura sequencial (leia-se: arrays, hashes, splits,
+   filehandles) e servir como entrada padrão para "pattern-searching".
+   Exemplos:
+
+     | 
+     | my @array = ( 1, 2, 3, 4, 5 );
+     | foreach ( @array ) {
+     |     print;
+     | }
+     | 
+
+ * $.
+   O número da linha que foi acabou de ser extraída (ou lida) de um
+   filehandle.
+
+ * $/
+   Separador padrão utilizado em um filehandle, o normal é indicar uma quebra
+   de linha;
+
+ * $$
+   O Número de processo, relativo ao sistema operacional, que o script atua
+   está fazendo uso;
+
+ * $!
+   Utilizada para repassar um número de erro ao software. 
+
+     | 
+     | open my $fh, '<', '/var/tmp/perl_101.txt'
+     |     or die "Ocorreu um erro: $!";
+     |  
+
+
+11.4 Variáveis Especiais: Para Saber Mais
+
+Neste capítulo foi demostrado as principais variáveis especiais do Perl,
+porem, sem muita profundidade no assunto, visto que este material é voltado
+para o iniciante na linguagem, portando ao leitor que deseja saber mais, favor
+consultar as seguintes referências:
+
+    http://perldoc.perl.org/perlvar.html
+    http://www.perl.com/pub/a/2004/06/18/variables.html
+    http://www.kichwa.com/quik_ref/spec_variables.html
+
 12. Estruturas da Linguagem
 12.1 Estruturas de Repetição
 12.2 Estruturas Condicionais
