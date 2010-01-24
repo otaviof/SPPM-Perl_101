@@ -649,7 +649,7 @@ comando:
  | $ perl hello_world.pl
  | 
 
-Veja que o parametro para o interpretador é o caminho de um arquivo contendo
+Veja que o parâmetro para o interpretador é o caminho de um arquivo contendo
 código válido Perl, neste caso acima, o arquivo está no mesmo diretório.
 
 Outra forma de usar o interpretador diretamente, é:
@@ -663,8 +663,8 @@ funcionar como ferramenta para linha de comando, com todo o poder de Perl,
 exemplo:
 
  | 
- | $ cat /etc/passwd \ 
- |      | perl -ne 'print $1, "\n" if ( /^(\w+):.*?$/ );' \
+ | $ cat /etc/passwd                                        \ 
+ |      | perl -ne 'print $1, "\n" if ( /^(\w+):.*?$/ );'   \
  |      | head
  | root
  | toor
@@ -690,7 +690,7 @@ arquivo e o transformar em um executável. Veja os exemplos:
 
 Repare que na primeira linha do script é uma indicação de quem vai interpretar
 os dados que estão nas linhas seguintes, o nome desta entrada é Shebang [1].
-Nós poderiamos informar o binário do Perl diretamente, por exemplo:
+Nós poderíamos informar o binário do Perl diretamente, por exemplo:
 "/usr/bin/perl" ou "/usr/local/bin/perl" (dependendo de onde ele foi
 instalado), no entanto, com o auxílio do "env" (/usr/bin) [2] nós podemos
 simplificar.
@@ -999,6 +999,33 @@ Para saber mais:
 
 10.4 Estruturas Complexas
 
+Neste ponto, nós já sabemos quais os principais tipos de dados no Perl, como
+eles são utilizados e até presenciamos alguns exemplos introdutórios. Porem, o
+leitor que já tem mais experiência em desenvolvimento de softwares nos
+pergunta se é possível misturar os vários tipos de estrutura, e a reposta é
+Sim. Sim, é possível fazer uso de todos os tipos de estruturas nativas do perl
+de forma misturada, assim como mostramos no exemplo a seguir:
+
+ | 
+ | my $mix = [
+ |     {   a_hash        => "yes",
+ |         another_value => 1,
+ |     },
+ |     [ 1, 2, 3, 4, 5 ],
+ | ];
+ | 
+
+Na estrutura acima temos um scalar recebendo uma referência de um array, e
+dentro deste um hash e outro array.
+
+Com estas opções Perl é o suficiente para lidar com qualquer tipo de dado ou
+estrutura que um software pode necessitar.
+
+Para saber mais:
+    http://perldoc.perl.org/perldsc.html
+    http://docstore.mik.ua/orelly/perl/prog3/ch09_03.htm
+    http://www.cbs.dtu.dk/courses/27619/advanced1.html
+
 11. Variáveis Especiais
 
 12. Estruturas da Linguagem
@@ -1143,14 +1170,14 @@ computador, basta utilizar o comando "r", veja o exemplo:
  | 
  | cpan[3]> r
  | 
- | Package namespace         installed    latest  in CPAN file
- | Attribute::Handlers         0.78_03      0.87  SMUELLER/Attribute-Handlers-0.87.tar.gz
- | AutoLoader                     5.67      5.70  SMUELLER/AutoLoader-5.70.tar.gz
+ | Package namespace    installed    latest  in CPAN file
+ | Attribute::Handlers    0.78_03      0.87  SMUELLER/Attribute-Handlers-0.87.tar.gz
+ | AutoLoader                5.67      5.70  SMUELLER/AutoLoader-5.70.tar.gz
  | (...)
- | Net::SNMP                    v5.2.0    v6.0.0  DTOWN/Net-SNMP-v6.0.0.tar.gz
- | Pod::Man                       1.37      2.23  RRA/podlators-2.3.0.tar.gz
- | Term::ANSIColor                1.12      2.02  RRA/ANSIColor-2.02.tar.gz
- | Text::Tabs                2007.1117 2009.0305  MUIR/modules/Text-Tabs+Wrap-2009.0305.tar.gz
+ | Net::SNMP               v5.2.0    v6.0.0  DTOWN/Net-SNMP-v6.0.0.tar.gz
+ | Pod::Man                  1.37      2.23  RRA/podlators-2.3.0.tar.gz
+ | Term::ANSIColor           1.12      2.02  RRA/ANSIColor-2.02.tar.gz
+ | Text::Tabs           2007.1117 2009.0305  MUIR/modules/Text-Tabs+Wrap-2009.0305.tar.gz
  | 226 installed modules have no parseable version number
  | 
 
