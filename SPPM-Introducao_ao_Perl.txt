@@ -1,84 +1,46 @@
 Introdução ao Perl
 ~~~~~~~~~~~~~~~~~~
 
-A visão deste curso é dar base para o programador que deseja ter uma visão
-geral sobre a linguagem Perl. Mostrando as estruturas que a compõe, bem como
-sua história.
+A visão deste curso é dar base para o programador que deseja ter uma visão geral sobre a linguagem Perl. Mostrando as estruturas que a compõe, bem como sua história.
 
 1. Introdução:
 
-Flexível, portável, versátil, e disponível para todos, Perl cresceu de um
-substituto simples para Shell Scripts, a uma linguagem completa e de propósito
-geral.
+Flexível, portável, versátil, e disponível para todos, Perl cresceu de um substituto simples para Shell Scripts, a uma linguagem completa e de propósito geral.
 
-Esta popular, rica em recursos está ganhando ainda mais terreno enquanto
-adquire mais "features" a cada nova versão ou extensão. Assim como fez o
-Moose [1], que trouxe uma grande melhora em Orientação a Objetos para o Perl
-5, inspirado no Perl 6.
+Esta popular, rica em recursos está ganhando ainda mais terreno enquanto adquire mais "features" a cada nova versão ou extensão. Assim como fez o Moose [1], que trouxe uma grande melhora em Orientação a Objetos para o Perl 5, inspirado no Perl 6.
 
-Uma característica particular, porem muito poderosa, do Perl é a sua
-implementação de bibliotecas com módulos, o qual a fez uma linguagem
-genuinamente extensível
+Uma característica particular, porem muito poderosa, do Perl é a sua implementação de bibliotecas com módulos, o qual a fez uma linguagem genuinamente extensível
 
-Com a sua clareza, estrutura lógica e abordagem prática, este guia é ideal
-para guiar e acompanhar o leitor ao mundo Perl.
+Com a sua clareza, estrutura lógica e abordagem prática, este guia é ideal para guiar e acompanhar o leitor ao mundo Perl.
 
 [1] http://www.iinteractive.com/moose/
 
 1.1 Conceitos de programação
 
-Para podermos entender quais as bases do Perl, devemos primeiro relembrar
-alguns conceitos fundamentais de programação:
+Para podermos entender quais as bases do Perl, devemos primeiro relembrar alguns conceitos fundamentais de programação:
 
 1.1.1 Linguagem dinâmica
 
-É uma classe de linguagens, com um alto nível de abstração [1], no qual em
-tempo de execução realizam tarefas que outras linguagens (chamadas
-"estáticas") fariam em tempo de compilação. Neste comportamento dinâmico, o
-software poderia incluir/importar novas partes, extender objetos e definições,
-tudo isso é provido de maneira direta e simples.
+É uma classe de linguagens, com um alto nível de abstração [1], no qual em tempo de execução realizam tarefas que outras linguagens (chamadas "estáticas") fariam em tempo de compilação. Neste comportamento dinâmico, o software poderia incluir/importar novas partes, extender objetos e definições, tudo isso é provido de maneira direta e simples.
 
-[1] Níveis de abstração é uma classificação, relativa ao desenvolvimento de
-software e a uma linguagem de programação, indicando 
+[1] Níveis de abstração é uma classificação, relativa ao desenvolvimento de software e a uma linguagem de programação, indicando 
 
-Atenção: O termo "linguagem dinâmica" é diferente de "tipagem dinâmica". O
-primeiro refere-se ao dinamismo em tempo de execução; o segundo, refere-se a
-validação dos tipos.
+Atenção: O termo "linguagem dinâmica" é diferente de "tipagem dinâmica". O primeiro refere-se ao dinamismo em tempo de execução; o segundo, refere-se a validação dos tipos.
 
 Leia mais:
     http://en.wikipedia.org/wiki/Dynamic_language
 
 1.1.2 Tipagem dinâmica
 
-Uma linguagem de programação tem tipos dinâmicos (por exemplo: int, char,
-scalar, array, hash), quando a maioria das verificações de tipos é feita em
-tempo de execução. Ou seja, os tipos, propriamente ditos, são associados aos
-valores e não as variáveis.
+Uma linguagem de programação tem tipos dinâmicos (por exemplo: int, char, scalar, array, hash), quando a maioria das verificações de tipos é feita em tempo de execução. Ou seja, os tipos, propriamente ditos, são associados aos valores e não as variáveis.
 
-Exemplos de linguagens com tipos dinâmicos: Groovy, JavaScript, Lisp, Lua,
-Objective-C, PHP, Perl, Prolog, Python, Ruby, Smalltalk, Tcl.
+Exemplos de linguagens com tipos dinâmicos: Groovy, JavaScript, Lisp, Lua, Objective-C, PHP, Perl, Prolog, Python, Ruby, Smalltalk, Tcl.  
 
-Tipos dinâmicos vão acusar seus erros em tempo de execução; por exemplo, um
-valor pode ser um tipo inesperado ou inexistente, ou uma operação errônea (sem
-sentido) pode ser atribuída a um tipo que não a suporta. Deve ficar evidente
-que este tipo de situação é _sempre_ causada pelo programador, e em um cenário
-assim, pode ser um pouco mais trabalhoso encontrar o causador. É uma situação
-esperada.
+Tipos dinâmicos vão acusar seus erros em tempo de execução; por exemplo, um valor pode ser um tipo inesperado ou inexistente, ou uma operação errônea (sem sentido) pode ser atribuída a um tipo que não a suporta. Deve ficar evidente que este tipo de situação é _sempre_ causada pelo programador, e em um cenário assim, pode ser um pouco mais trabalhoso encontrar o causador. É uma situação esperada.
 
-Se compararmos as linguagens de Tipagem Dinâmica com as de Tipagem Estática,
-elas fazem muito menos verificações nos fontes em tempo de compilação, apenas
-é certificado de que o programa está sintaticamente correto. Verificações em
-tempo de execução podem potencialmente ser mais sofisticados, porque são
-utilizadas as informações geradas pela execução do software, em
-contra-partida, estas verificações são executadas todas as vezes que o
-software for chamado.
+Se compararmos as linguagens de Tipagem Dinâmica com as de Tipagem Estática, elas fazem muito menos verificações nos fontes em tempo de compilação, apenas é certificado de que o programa está sintaticamente correto. Verificações em tempo de execução podem potencialmente ser mais sofisticados, porque são utilizadas as informações geradas pela execução do software, em contra-partida, estas verificações são executadas todas as vezes que o software for chamado.
 
-O desenvolvimento em linguagens de Tipos Dinâmicos tem grande auxílio por boas
-práticas de programação, como por exemplo Testes Unitários (Unit Testing).
-"Testar" é a chave em desenvolvimento profissional de software, e é
-particularmente importante nestes casos. Na prática, os testes asseguram a
-operação correta do seu software de forma muito mais ampla se comparado às
-estáticas (ou seja, através da verificação de tipos feita pelo compilador).
+O desenvolvimento em linguagens de Tipos Dinâmicos tem grande auxílio por boas práticas de programação, como por exemplo Testes Unitários (Unit Testing).  "Testar" é a chave em desenvolvimento profissional de software, e é particularmente importante nestes casos. Na prática, os testes asseguram a operação correta do seu software de forma muito mais ampla se comparado às estáticas (ou seja, através da verificação de tipos feita pelo compilador).
 
 Saiba mais:
     http://en.wikipedia.org/wiki/Dynamic_typing#Dynamic_typing
@@ -425,52 +387,57 @@ Ao fazer isso no FreeBSD nós temos duas opções:
 
  * Ports:
 
-Cada port contêm todas as instruções necessárias para fazer os fontes
-originais do projeto compilarem e serem executados no FreeBSD. Ao instalar um
-"Port" o Makefile [1] busca automaticamente os fontes da aplicacação desejada,
-tanto em disco local quanto remoto (HTTP/FTP), em seguida, os fontes são
-decompactados em um diretório. O próximo passo é aplicar os pathes necessários
-(a maioria deles visa compatibiliade com o FreeBSD), após, os fontes já estão
-prontos para compilar.
+   Cada port contêm todas as instruções necessárias para fazer os fontes
+   originais do projeto compilarem e serem executados no FreeBSD. Ao instalar
+   um "Port" o Makefile [1] busca automaticamente os fontes da aplicação
+   desejada, tanto em disco local quanto remoto (HTTP/FTP), em seguida, os
+   fontes são descompactados em um diretório. O próximo passo é aplicar os
+   patches necessários (a maioria deles visa compatibilidade com o FreeBSD),
+   após, os fontes já estão prontos para compilar.
+   
+   A seguir, esta apostila vai demonstrar os poucos comandos necessários para
+   cumprir todos os procedimentos listados acima -- portanto, é presumido que
+   o leitor esteja com acesso ao terminal (local, virtual ou remoto). Segue: 
 
-A seguir, esta apostila vai demonstar os poucos comandos necessários para
-cumprir todos os procedimentos listados acima -- portanto, é presumido que o
-leitor esteja com acesso ao terminal (local, virtual ou remoto). Segue:
+     | 
+     | # uname -a
+     | FreeBSD bsd.domain.com.br 8.0-RELEASE-p2 FreeBSD 8.0-RELEASE-p2 #0:
+     | Tue Jan  5 21:11:58 UTC 2010
+     | root@amd64-builder.daemonology.net:/usr/obj/usr/src/sys/GENERIC amd64 
+     | 
+     | # cd /usr/ports/lang/perl5.10 && make install clean
+     | 
 
-# uname -a
-    FreeBSD bsd.domain.com.br 8.0-RELEASE-p2 FreeBSD 8.0-RELEASE-p2 #0: Tue
-    Jan  5 21:11:58 UTC 2010
-    root@amd64-builder.daemonology.net:/usr/obj/usr/src/sys/GENERIC amd64
+   Nota: o primeiro comando é apenas uma demonstração de qual a versão
+   empregada do sistema; o segundo, é praticamente todo o trabalho necessário,
+   com exceção de responder algumas simples perguntas durante o processo.  
 
-# cd /usr/ports/lang/perl5.10 && make install clean
-
-Note que o primeiro comando é apenas uma demonstração de qual a versão
-empregada do sistema; o segundo, é praticamente todo o trabalho necessáiro,
-com execessão de responder algumas simples perguntas durante o processo.
-
-Para saber mais:
-    http://www.freebsd.org/doc/en/books/developers-handbook/tools-make.html
+   Para saber mais:
+        http://www.freebsd.org/doc/en/books/developers-handbook/tools-make.html
 
  * Packages:
 
-Os packages consistem em instalar um pacote préviamente compilados. Alguns
-cluster são empregados pelo time de desenvolvimento do FreeBSD para compilar o
-máximo de pacotes possíveis estas plataformas: alpha, amd64, ARM, i386, ia64,
-MIPS, PC98, PPC, Sparc64, Sun4v e Xbox.
+   Os packages consistem em instalar um pacote préviamente
+   compilados. Alguns cluster são empregados pelo time de desenvolvimento do
+   FreeBSD para compilar o máximo de pacotes possíveis estas plataformas:
+   alpha, amd64, ARM, i386, ia64, MIPS, PC98, PPC, Sparc64, Sun4v e Xbox.
 
-Para isso, basta:
+   Para isso, basta:
 
-# pkg_add -rv perl5.10
+     | 
+     | # pkg_add -rv perl5.10
+     | 
 
-Reparece que isso consiste apenas em dois comandos, sendo um deles o nome do
-pacote que nós desejamos. Esta forma de instalação cobre também todas as
-dependências necessárias, ou seja, para instalar o Perl você vai precisar
-instalar susas dependências, e o FreeBSD Package System fará isso por você.
+   Reparece que isso consiste apenas em dois comandos, sendo um deles o nome
+   do pacote que nós desejamos. Esta forma de instalação cobre também todas as
+   dependências necessárias, ou seja, para instalar o Perl você vai precisar
+   instalar suas dependências, e o FreeBSD Package System fará isso por
+   você.
 
 6.1.2 GNU/Linux
 
 O projeto Linux está disposto de forma diferente, se compararmo-os ao FreeBSD.
-Pois o Linux é representado enquanto sistema operacial porque grupos de
+Pois o Linux é representado enquanto sistema operacional porque grupos de
 usuários fazem versões customizadas e mais completas, estas são chamadas
 distribuições. Abaixo, mostraremos exemplos nos dois principais tipos de
 distribuições atualmente.
@@ -493,9 +460,11 @@ Se houver alguma customização do SO, ou qualquer outra situação em que o Per
 não esteja instalado, poremos seguir os procedimentos para reverter esta
 situação:
 
-# apt-get update && apt-get install perl
+ | 
+ | # apt-get update && apt-get install perl
+ | 
 
-Novamente, o exempo de instalação assume que você está com a sua base de
+Novamente, o exemplo de instalação assume que você está com a sua base de
 pacotes atualizada, vide o primeiro comando. O segundo toma conta de tudo mais
 o que é necessário, download, desempacotar, instalar e registrar perante a
 base do SO.
@@ -517,7 +486,9 @@ Nesta tipo de distribuição o normal é que o interpretador Perl venha instalad
 por padrão, já que esta faz parte da sua construção. Se em casos específicos o
 interpretador Perl não esteja presente, execute os comandos abaixo:
 
-# yum update && yum install perl
+ | 
+ | # yum update && yum install perl
+ | 
 
 O primeiro comando é apenas um gancho para recomendar que a base de pacotes
 esteja sempre atualizada. O segundo dá inicio a cadeia de ações necessárias
@@ -712,6 +683,8 @@ E testar:
 [2] http://linux.die.net/man/1/env
 
 9. Sintaxe
+
+
 
 ####### RASCUNHO #######
 
@@ -1102,7 +1075,6 @@ Para saber mais:
      |     or die "Ocorreu um erro: $!";
      |  
 
-
 11.4 Variáveis Especiais: Para Saber Mais
 
 Neste capítulo foi demostrado as principais variáveis especiais do Perl,
@@ -1174,10 +1146,10 @@ será a CPAN (http://cpan.org ou http://search.cpan.org).
 
 Além de centralizar, ela nos provê acesso para:
 
-* Buscas por nomes, conteúdo, descrição;
-* Instalação do conteúdo, biblioteca, software;
-* Visualização do conteúdo (fontes, documentação);
-* Manutenção, principalmente upgrades ou downgrades;
+ * Buscas por nomes, conteúdo, descrição;
+ * Instalação do conteúdo, biblioteca, software;
+ * Visualização do conteúdo (fontes, documentação);
+ * Manutenção, principalmente upgrades ou downgrades;
 
 Perl também é conhecido como o canivete suíço das linguagens de programação,
 definitivamente a CPAN amplifica o poder de uma ferramenta tão útil e versátil
@@ -1425,14 +1397,6 @@ Afinal, os códigos-fonte para nós nada mais são do que texto, e por este
 motivo nós podemos ficar tentandos a tratá-los simplesmente como tal e usar as
 ferramentas de copiar e colar. Neste ponto nós passamor a ter um problema.
 
-The DRY principle is stated as "Every piece of knowledge must have a single,
-unambiguous, authoritative representation within a system." The principle has
-been formulated by Andy Hunt and Dave Thomas in their book The Pragmatic
-Programmer.
-
-They apply it quite broadly to include "database schemas, test plans, the
-build system, even documentation."[1]
-
 O princípio desta boa prática esta ligado ao conceito de que cada peça de
 conhecimento deve ter uma única representação em um sistema. Este princípio
 foi formulado por Andy Hunt [1] e Dave Thomas [2] no livro "The Pragmatic
@@ -1596,4 +1560,9 @@ TODO:
 
 99. Bibliografia
 
-Pro Perl, Peter Wainwright ( ISBN: 1-59059-438-X )
+    Pro Perl, Peter Wainwright ( ISBN: 1-59059-438-X )
+    Learning Perl
+    Perl Cookbook
+    Programming Perl
+    Perl Best Practices
+    Wikipedia

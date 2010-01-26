@@ -23,14 +23,18 @@
     * Hashes;
     * Estruturas Complexas;
 
-
-
-
 (11)
 * Variáveis especiais;
 
+
+
+
 (12)
 * Estruturas de repetição, condições e operadores;
+
+
+
+
 
 (13)
 * Tratamento de arquivos;
@@ -50,7 +54,12 @@
     * Testes de Aceiação;
     * Testes de Integração;
 
+
+
+
 * Orientação a Objetos com Moose;
+
+
 
 * Perl para Web;
 
